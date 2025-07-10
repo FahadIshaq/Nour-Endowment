@@ -61,7 +61,7 @@ export default function DonorVoicesCarousel() {
   const [swiper, setSwiper] = useState<any>(null)
   return (
     <div className="w-full max-w-7xl mx-auto py-12 relative">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8 bg-black bg-clip-text text-transparent">
         Donor's Voices
       </h2>
       <div className="relative">

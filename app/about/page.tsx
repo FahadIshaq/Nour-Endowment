@@ -33,15 +33,12 @@ export default function AboutPage() {
         <div className="container mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1
-              className="text-5xl lg:text-6xl font-bold leading-tight mb-8"
+              className="text-5xl lg:text-6xl font-bold leading-tight mb-8 text-black"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              About{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                Nour Endowment
-              </span>
+              About Nour Endowment
             </motion.h1>
 
             <motion.p
@@ -67,10 +64,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                Mission
-              </span>
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              Mission
             </motion.h2>
             <motion.p
               variants={fadeInUp}
@@ -123,11 +118,11 @@ export default function AboutPage() {
               className="space-y-8 lg:order-2"
             >
               <motion.div variants={fadeInUp}>
-                <h3 className="text-3xl font-bold mb-6 text-slate-800">How it Works</h3>
+                <h3 className="text-3xl font-bold mb-6 text-black">How it Works</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <TrendingUp className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-[#5B6A3F] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <TrendingUp className="w-4 h-4 text-white" />
                     </div>
                     <p className="text-lg text-slate-600">
                       We invest all contributions and use only the returns to fund long-term educational and
@@ -135,8 +130,8 @@ export default function AboutPage() {
                     </p>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <Shield className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-[#5B6A3F] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Shield className="w-4 h-4 text-white" />
                     </div>
                     <p className="text-lg text-slate-600">
                       The principal remains untouched forever, allowing the endowment to grow perpetually.
@@ -173,11 +168,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6">
-              Our{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                Values
-              </span>
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              Our Values
             </motion.h2>
           </motion.div>
 
@@ -194,40 +186,34 @@ export default function AboutPage() {
                 title: "Our Mission",
                 description:
                   "To provide sustainable educational opportunities and community development programs that empower individuals and strengthen communities for generations to come.",
-                color: "from-emerald-500 to-emerald-600",
-                border: "border-emerald-400/60",
               },
               {
                 icon: Globe,
                 title: "Our Vision",
                 description:
                   "A world where every individual has access to quality education and the resources needed to reach their full potential, regardless of their background or circumstances.",
-                color: "from-teal-500 to-teal-600",
-                border: "border-teal-400/60",
               },
               {
                 icon: Heart,
                 title: "Our Values",
                 description:
                   "Excellence, Integrity, Innovation, and Compassion guide everything we do as we work to create lasting positive change in communities worldwide.",
-                color: "from-blue-500 to-blue-600",
-                border: "border-blue-400/60",
               },
             ].map((value, index) => (
               <motion.div key={index} variants={fadeInUp} className="relative flex justify-center items-stretch">
                 {/* Floating Icon */}
                 <motion.div
-                  className={`absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-3xl shadow-lg bg-gradient-to-r ${value.color} flex items-center justify-center border-4 border-white/70`}
+                  className="absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-3xl shadow-lg bg-[#5B6A3F] flex items-center justify-center border-4 border-white/70"
                   whileHover={{ scale: 1.08, rotate: 8 }}
                   transition={{ duration: 0.4 }}
-                  style={{ boxShadow: '0 8px 32px 0 rgba(16, 185, 129, 0.15)' }}
+                  style={{ boxShadow: '0 8px 32px 0 rgba(91, 106, 63, 0.15)' }}
                 >
                   <value.icon className="w-10 h-10 text-white" />
                 </motion.div>
                 {/* Card */}
-                <Card className={`h-full pt-16 pb-8 px-6 bg-white/70 backdrop-blur-lg border ${value.border} border-t-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.025] hover:shadow-2xl`}> 
+                <Card className="h-full pt-16 pb-8 px-6 bg-white border border-[#5B6A3F]/20 border-t-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.025] hover:shadow-2xl"> 
                   <CardHeader className="text-center">
-                    <CardTitle className="text-2xl font-bold mb-2 text-slate-800">{value.title}</CardTitle>
+                    <CardTitle className="text-2xl font-bold mb-2 text-black">{value.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-slate-600 leading-relaxed text-base">{value.description}</CardDescription>
@@ -246,25 +232,25 @@ export default function AboutPage() {
           >
             <Card className="bg-white/70 backdrop-blur-lg border border-slate-200/60 rounded-3xl shadow-2xl p-8">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-2xl font-bold mb-4 text-slate-800">Core Principles</CardTitle>
+                <CardTitle className="text-2xl font-bold mb-4 text-black">Core Principles</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   {[
-                    { name: "Excellence", color: "from-emerald-500 to-emerald-600" },
-                    { name: "Integrity", color: "from-teal-500 to-teal-600" },
-                    { name: "Innovation", color: "from-blue-500 to-blue-600" },
-                    { name: "Compassion", color: "from-emerald-400 to-blue-400" },
+                    { name: "Excellence" },
+                    { name: "Integrity" },
+                    { name: "Innovation" },
+                    { name: "Compassion" },
                   ].map((principle) => (
                     <motion.div
                       key={principle.name}
                       className="flex items-center space-x-4 p-4 rounded-xl bg-white/60 hover:bg-white/80 transition group shadow"
                       whileHover={{ x: 6 }}
                     >
-                      <span className={`w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-r ${principle.color} shadow-md mr-2`}>
+                      <span className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#5B6A3F] shadow-md mr-2">
                         <CheckCircle className="w-6 h-6 text-white" />
                       </span>
-                      <span className="text-lg text-slate-700 font-semibold group-hover:text-emerald-600 transition">{principle.name}</span>
+                      <span className="text-lg text-slate-700 font-semibold group-hover:text-[#5B6A3F] transition">{principle.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -293,7 +279,7 @@ export default function AboutPage() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="text-lg px-8 py-6 bg-white text-emerald-600 hover:bg-slate-100"
+                  className="text-lg px-8 py-6 bg-white text-[#5B6A3F] hover:bg-slate-100"
                 >
                   Get Involved Today
                   <ArrowRight className="ml-2 w-5 h-5" />

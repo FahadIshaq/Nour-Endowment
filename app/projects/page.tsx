@@ -46,7 +46,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              className="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium mb-6"
+              className="inline-block px-4 py-2 bg-[#5B6A3F] text-white rounded-full text-sm font-medium mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -55,15 +55,12 @@ export default function ProjectsPage() {
             </motion.div>
 
             <motion.h1
-              className="text-5xl lg:text-6xl font-bold leading-tight mb-8"
+              className="text-5xl lg:text-6xl font-bold leading-tight mb-8 text-black"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <span className="text-slate-800">Our</span>{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                Vision
-              </span>
+              Our Vision
             </motion.h1>
 
             <motion.p
@@ -88,9 +85,8 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6">
-              What We{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Fund</span>
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              What We Fund
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
               At Nour Endowment, we are dedicated to investing in individuals, organizations, and initiatives that
@@ -122,7 +118,7 @@ export default function ProjectsPage() {
               className="space-y-8"
             >
               <motion.div variants={fadeInUp}>
-                <h3 className="text-3xl font-bold mb-6 text-slate-800">Our Vision for Investments</h3>
+                <h3 className="text-3xl font-bold mb-6 text-black">Our Vision for Investments</h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   We are inspired by initiatives that expand access to education, nurture professional growth, and
                   create pathways to opportunity for individuals facing systemic barriers. As we build a sustainable
@@ -150,55 +146,49 @@ export default function ProjectsPage() {
                 title: "Education",
                 description:
                   "Promote international educational exchange, scholarships, and fellowships that empower students, scholars, and professionals from underrepresented backgrounds.",
-                color: "from-emerald-500 to-emerald-600",
               },
               {
                 icon: Award,
                 title: "Scholarships",
                 description:
                   "Provide accessible, tuition-free, or low-cost higher education opportunities for refugees, displaced populations, and low-income communities around the world.",
-                color: "from-teal-500 to-teal-600",
               },
               {
                 icon: BookOpen,
                 title: "Learning Stability",
                 description:
                   "Ensure continuity of education for children and youth affected by crisis, displacement, and systemic instability through infrastructure support, vocational training, and learning resources.",
-                color: "from-blue-500 to-blue-600",
               },
               {
                 icon: Users,
                 title: "Community Empowerment",
                 description:
                   "Strengthen educational infrastructure, enhance teacher development, and deliver job-skills training through community-driven programs that foster long-term resilience and economic opportunity.",
-                color: "from-purple-500 to-purple-600",
               },
               {
                 icon: Building,
                 title: "Higher Education Access",
                 description:
                   "Support students pursuing higher education through investments in scholarships, fellowships, and opportunities that foster academic and professional growth for individuals from diverse and underserved backgrounds.",
-                color: "from-indigo-500 to-indigo-600",
               },
               {
                 icon: Globe,
                 title: "Global Impact",
                 description:
                   "Create worldwide networks of opportunity that connect communities, share resources, and build sustainable pathways to educational and professional success.",
-                color: "from-green-500 to-green-600",
               },
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#5B6A3F]/20 bg-white">
                   <CardHeader>
                     <motion.div
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${area.color} flex items-center justify-center mb-4`}
+                      className="w-16 h-16 rounded-2xl bg-[#5B6A3F] flex items-center justify-center mb-4"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
                       <area.icon className="w-8 h-8 text-white" />
                     </motion.div>
-                    <CardTitle className="text-xl font-bold">{area.title}</CardTitle>
+                    <CardTitle className="text-xl font-bold text-black">{area.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-slate-600 leading-relaxed">{area.description}</CardDescription>
@@ -211,7 +201,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Support CTA */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-20 bg-[#5B6A3F]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -230,7 +220,7 @@ export default function ProjectsPage() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="text-lg px-8 py-6 bg-white text-emerald-600 hover:bg-slate-100"
+                  className="text-lg px-8 py-6 bg-white text-[#5B6A3F] hover:bg-slate-100"
                 >
                   Support Now
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -251,11 +241,8 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6">
-              Get{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                Funded
-              </span>
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              Get Funded
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
               If you are an individual or organization pursuing opportunities that align with our mission, we'd love to
@@ -295,11 +282,11 @@ export default function ProjectsPage() {
                     className="flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#5B6A3F] rounded-xl flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-800 mb-2">{item.title}</h4>
+                      <h4 className="font-bold text-black mb-2">{item.title}</h4>
                       <p className="text-slate-600 leading-relaxed">{item.content}</p>
                     </div>
                   </motion.div>
@@ -337,7 +324,7 @@ export default function ProjectsPage() {
                       />
                     </div>
                     <motion.div {...scaleOnHover}>
-                      <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-lg py-6">
+                      <Button className="w-full bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white text-lg py-6">
                         Submit Application
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
@@ -359,7 +346,7 @@ export default function ProjectsPage() {
             <Link href="/contact">
               <Button
                 variant="outline"
-                className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 bg-transparent"
+                className="border-[#5B6A3F] text-[#5B6A3F] hover:bg-[#5B6A3F]/10 bg-transparent"
               >
                 Contact Us Here
               </Button>

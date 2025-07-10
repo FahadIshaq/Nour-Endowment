@@ -40,7 +40,7 @@ export default function HomePage() {
               className="space-y-8"
             >
               <motion.div
-                className="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium"
+                className="inline-block px-4 py-2 bg-[#5B6A3F] text-white rounded-full text-sm font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -49,18 +49,12 @@ export default function HomePage() {
               </motion.div>
 
               <motion.h1
-                className="text-4xl lg:text-5xl font-bold leading-tight"
+                className="text-4xl lg:text-5xl font-bold leading-tight text-black"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                <span className="text-slate-800">A Sustainable Endowment That</span>
-                <br />
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                  Reinvests In Marginalized
-                </span>
-                <br />
-                <span className="text-slate-600">Communities Through Education</span>
+                A Sustainable Endowment That Reinvests In Marginalized Communities Through Education
               </motion.h1>
 
               <motion.p
@@ -83,7 +77,7 @@ export default function HomePage() {
                   <motion.div {...scaleOnHover}>
                     <Button
                       size="lg"
-                      className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-lg px-8 py-6"
+                      className="bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white text-lg px-8 py-6"
                     >
                       Start Contributing
                       <ArrowRight className="ml-2 w-5 h-5" />
@@ -119,7 +113,7 @@ export default function HomePage() {
                   transition={{ duration: 0.3 }}
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-r from-emerald-200 to-teal-200 rounded-2xl -z-10"></div>
+              <div className="absolute -top-4 -right-4 w-full h-full bg-[#5B6A3F]/20 rounded-2xl -z-10"></div>
             </motion.div>
           </div>
         </div>
@@ -142,36 +136,30 @@ export default function HomePage() {
                 label: "Committed Members",
                 description: "Growing community of supporters",
                 icon: UserCheck,
-                gradient: "from-emerald-100 to-emerald-300",
-                iconColor: "text-emerald-600"
               },
               {
                 number: "$1B",
                 label: "Target Endowment",
                 description: "We only use the returns for education",
                 icon: Target,
-                gradient: "from-blue-100 to-blue-300",
-                iconColor: "text-blue-600"
               },
               {
                 number: "∞",
                 label: "Years of Impact",
                 description: "Perpetual giving model",
                 icon: Infinity,
-                gradient: "from-yellow-100 to-emerald-100",
-                iconColor: "text-emerald-600"
               },
             ].map((stat, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
-                <Card className="flex flex-col items-center text-center rounded-2xl bg-white/80 backdrop-blur-lg border border-gradient-to-br from-emerald-200 via-white to-blue-200 shadow-lg hover:shadow-emerald-200/40 transition-all duration-300 w-full max-w-[320px] p-4 sm:p-6 relative overflow-hidden group">
-                  {/* Gradient accent bar */}
-                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-400 opacity-70 group-hover:opacity-100 transition-all duration-300" />
-                  {/* Icon with glow */}
-                  <div className={`flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br ${stat.gradient} mb-3 mt-3 shadow ring-2 ring-white/60`}>
-                    <stat.icon className={`w-6 h-6 ${stat.iconColor} drop-shadow`} />
+                <Card className="flex flex-col items-center text-center rounded-2xl bg-white border border-[#5B6A3F]/20 shadow-lg hover:shadow-[#5B6A3F]/20 transition-all duration-300 w-full max-w-[320px] p-4 sm:p-6 relative overflow-hidden group">
+                  {/* Accent bar */}
+                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl bg-[#5B6A3F] opacity-70 group-hover:opacity-100 transition-all duration-300" />
+                  {/* Icon */}
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#5B6A3F] mb-3 mt-3 shadow ring-2 ring-white/60">
+                    <stat.icon className="w-6 h-6 text-white drop-shadow" />
                   </div>
-                  <div className="text-3xl font-extrabold mb-1 bg-gradient-to-r from-emerald-600 via-teal-500 to-blue-500 bg-clip-text text-transparent tracking-wide">{stat.number}</div>
-                  <div className="text-base font-semibold text-slate-800 mb-1 tracking-wider">{stat.label}</div>
+                  <div className="text-3xl font-extrabold mb-1 text-[#5B6A3F] tracking-wide">{stat.number}</div>
+                  <div className="text-base font-semibold text-black mb-1 tracking-wider">{stat.label}</div>
                   <div className="text-slate-500 text-sm">{stat.description}</div>
                 </Card>
               </motion.div>
@@ -193,11 +181,8 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6">
-              How{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                It Works
-              </span>
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              How It Works
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-3xl mx-auto">
               Your gift isn't spent - it's invested. We use only the returns to fund education and opportunity.
@@ -217,33 +202,30 @@ export default function HomePage() {
                 title: "You Contribute",
                 description: "Make a one-time or recurring donation to build the endowment principal.",
                 icon: Heart,
-                color: "from-emerald-500 to-emerald-600",
               },
               {
                 step: "02",
                 title: "We Invest",
                 description: "Your contribution is professionally invested using halal-compliant strategies.",
-                icon: ArrowRight, // Changed from TrendingUp to ArrowRight
-                color: "from-teal-500 to-teal-600",
+                icon: ArrowRight,
               },
               {
                 step: "03",
                 title: "Impact Forever",
                 description: "Investment returns fund education and opportunity while your principal grows.",
                 icon: Globe,
-                color: "from-blue-500 to-blue-600",
               },
             ].map((step, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
-                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white/70 backdrop-blur-xl border border-gradient-to-br from-emerald-200 via-white to-blue-200 shadow-xl hover:shadow-emerald-200/40 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs p-8 group overflow-hidden">
+                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#5B6A3F]/20 shadow-xl hover:shadow-[#5B6A3F]/20 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs p-8 group overflow-hidden">
                   {/* Floating Icon with Glow */}
-                  <div className={`absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-gradient-to-br ${step.color} opacity-80 blur-md`} />
-                  <div className={`relative z-20 w-16 h-16 rounded-2xl bg-gradient-to-r ${step.color} flex items-center justify-center mb-4 mx-auto shadow-lg`}>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-[#5B6A3F] opacity-80 blur-md" />
+                  <div className="relative z-20 w-16 h-16 rounded-2xl bg-[#5B6A3F] flex items-center justify-center mb-4 mx-auto shadow-lg">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
                   {/* Step Number */}
-                  <div className="text-5xl font-extrabold bg-gradient-to-r from-emerald-600 via-teal-500 to-blue-500 bg-clip-text text-transparent mb-2 drop-shadow-lg">{step.step}</div>
-                  <div className="text-xl font-bold mb-2">{step.title}</div>
+                  <div className="text-5xl font-extrabold text-[#5B6A3F] mb-2 drop-shadow-lg">{step.step}</div>
+                  <div className="text-xl font-bold mb-2 text-black">{step.title}</div>
                   <div className="text-slate-600 leading-relaxed text-center">{step.description}</div>
                 </Card>
               </motion.div>
@@ -277,7 +259,7 @@ export default function HomePage() {
               className="space-y-8"
             >
               <motion.div variants={fadeInUp}>
-                <h3 className="text-3xl font-bold mb-6 text-slate-800">Why Choose Nour Endowment?</h3>
+                <h3 className="text-3xl font-bold mb-6 text-black">Why Choose Nour Endowment?</h3>
               </motion.div>
 
               {[
@@ -303,11 +285,11 @@ export default function HomePage() {
                 },
               ].map((feature, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#5B6A3F] rounded-xl flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-800 mb-2">{feature.title}</h4>
+                    <h4 className="font-bold text-black mb-2">{feature.title}</h4>
                     <p className="text-slate-600 leading-relaxed">{feature.description}</p>
                   </div>
                 </motion.div>
@@ -338,7 +320,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="secondary"
-                    className="text-lg px-8 py-6 bg-white text-emerald-600 hover:bg-slate-100"
+                    className="text-lg px-8 py-6 bg-white text-[#5B6A3F] hover:bg-slate-100"
                   >
                     Start Contributing
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -350,7 +332,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-emerald-600 bg-transparent"
+                    className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-[#5B6A3F] bg-transparent"
                   >
                     See Our Projects
                   </Button>

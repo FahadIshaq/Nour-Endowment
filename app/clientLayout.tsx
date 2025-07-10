@@ -52,8 +52,8 @@ export default function ClientLayout({
                 {navigation.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <motion.span
-                      className={`text-slate-700 hover:text-emerald-600 font-medium transition-colors ${
-                        pathname === item.href ? "text-emerald-600 font-semibold" : ""
+                      className={`text-slate-700 hover:text-[#5B6A3F] font-medium transition-colors ${
+                        pathname === item.href ? "text-[#5B6A3F] font-semibold" : ""
                       }`}
                       whileHover={{ y: -2 }}
                     >
@@ -63,7 +63,7 @@ export default function ClientLayout({
                 ))}
                 <Link href="/donate">
                   <motion.div {...scaleOnHover}>
-                    <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
+                    <Button className="bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white">
                       Contribute Now
                     </Button>
                   </motion.div>
@@ -90,15 +90,15 @@ export default function ClientLayout({
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`text-slate-700 hover:text-emerald-600 font-medium ${
-                        pathname === item.href ? "text-emerald-600 font-semibold" : ""
+                      className={`text-slate-700 hover:text-[#5B6A3F] font-medium ${
+                        pathname === item.href ? "text-[#5B6A3F] font-semibold" : ""
                       }`}
                     >
                       {item.name}
                     </Link>
                   ))}
                   <Link href="/donate" onClick={() => setIsMenuOpen(false)}>
-                    <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 w-full">Contribute Now</Button>
+                    <Button className="bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white w-full">Contribute Now</Button>
                   </Link>
                 </div>
               </motion.div>
