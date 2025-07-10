@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Linkedin } from "lucide-react"
+import { Linkedin, Facebook } from "lucide-react"
 import { useState } from "react"
 import {
   Dialog,
@@ -59,7 +59,7 @@ export default function TeamPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Meet the dedicated individuals working to create lasting change through education and opportunity.
+              Meet the dedicated individuals working to create change through education.
             </motion.p>
           </div>
         </div>
@@ -188,18 +188,25 @@ export default function TeamPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
                 {
+                  name: "Imam Suleiman Hani",
+                  role: "Advisory Board Member",
+                  image: "/suleman.png",
+                  facebook: "https://www.facebook.com/imamsuleimanhani/",
+                  bio: `Imam Suleiman Hani is a theologian and human-rights advocate who bridges classical Islamic scholarship with contemporary leadership. He serves as Dean of Academic Affairs at Al Maghrib Institute, guiding the learning of more than 300,000 students across six continents, and is a Research Fellow at Yaqeen Institute for Islamic Research. Holding master's degrees from Harvard University and the University of Jordan, he is completing his doctorate in leadership at New York University.\n\nGrounded in dozens of traditional ijāzahs in Qur'an memorization, ḥadīth sciences, and Islamic law, Imam Suleiman pairs that expertise with modern academic rigor to address today's ethical and social-justice challenges. Over the past decade he has lectured in 50+ countries, advised national and international organizations, and authored widely read books.\n\nHis scholarship and leadership perfectly align with Nour Endowment's mission to invest in education and community uplift, offering an authentic voice rooted in faith, justice, and global experience.`
+                },
+                {
                   name: "Jawad Mourabet",
                   role: "Advisory Board Member",
                   image: "/jawad.avif",
                   linkedin: "https://www.linkedin.com/in/jawadmourabet/",
-                  bio: `Jawad is an Engagement Manager at McKinsey & Company, advising financial institutions on technology strategy, with a focus on generative AI, cloud infrastructure, and team design. He previously held technology roles at Li & Fung, Verizon, and Cognizant.\n\nHe holds a Bachelors in Engineering from Stony Brook, a Master’s in Civil Engineering from MIT, and an MBA from MIT Sloan, where he was an LGO Fellow.`
+                  bio: `Jawad is an Engagement Manager at McKinsey & Company, advising financial institutions on technology strategy, with a focus on generative AI, cloud infrastructure, and team design. He previously held technology roles at Li & Fung, Verizon, and Cognizant.\n\nHe holds a Bachelors in Engineering from Stony Brook, a Master's in Civil Engineering from MIT, and an MBA from MIT Sloan, where he was an LGO Fellow.`
                 },
                 {
                   name: "Diana Nassar",
                   role: "Advisory Board Member",
                   image: "/diana.avif",
                   linkedin: "https://www.linkedin.com/in/diananassar/",
-                  bio: `Diana is a product leader at Prime Video with 10+ years of experience in technology, media, and e-commerce. She has led 0-to-1 innovations and large-scale launches at Souq, Aramex, and now across the US.\n\nDiana holds an MBA from Stanford, a Bachelor’s in Computer Engineering from the University of Jordan, and is a TechWomen Fellow. She is passionate about using technology to create impact and empower others to drive change.`
+                  bio: `Diana is a product leader at Prime Video with 10+ years of experience in technology, media, and e-commerce. She has led 0-to-1 innovations and large-scale launches at Souq, Aramex, and now across the US.\n\nDiana holds an MBA from Stanford, a Bachelor's in Computer Engineering from the University of Jordan, and is a TechWomen Fellow. She is passionate about using technology to create impact and empower others to drive change.`
                 },
               ].map((member, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
@@ -220,15 +227,28 @@ export default function TeamPage() {
                         </CardTitle>
                         <div className="flex items-center gap-2 mb-2 mt-1">
                           <CardDescription className="text-slate-600 text-center">{member.role}</CardDescription>
-                          <a
-                            href={member.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`LinkedIn profile of ${member.name}`}
-                            className="ml-1 text-blue-600 hover:text-teal-600 transition"
-                          >
-                            <Linkedin className="w-5 h-5" />
-                          </a>
+                          {member.linkedin && (
+                            <a
+                              href={member.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`LinkedIn profile of ${member.name}`}
+                              className="ml-1 text-blue-600 hover:text-teal-600 transition"
+                            >
+                              <Linkedin className="w-5 h-5" />
+                            </a>
+                          )}
+                          {member.facebook && (
+                            <a
+                              href={member.facebook}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`Facebook profile of ${member.name}`}
+                              className="ml-1 text-blue-600 hover:text-teal-600 transition"
+                            >
+                              <Facebook className="w-5 h-5" />
+                            </a>
+                          )}
                         </div>
                       </CardHeader>
                       <motion.div {...scaleOnHover} className="mt-4 w-full flex justify-center">
@@ -254,16 +274,30 @@ export default function TeamPage() {
                             </DialogDescription>
                           </DialogHeader>
                           <div className="flex items-center gap-3 mb-4">
-                            <a
-                              href={member.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={`LinkedIn profile of ${member.name}`}
-                            >
-                              <Button variant="ghost" size="icon" className="rounded-full bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700">
-                                <Linkedin className="w-6 h-6" />
-                              </Button>
-                            </a>
+                            {member.linkedin && (
+                              <a
+                                href={member.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`LinkedIn profile of ${member.name}`}
+                              >
+                                <Button variant="ghost" size="icon" className="rounded-full bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700">
+                                  <Linkedin className="w-6 h-6" />
+                                </Button>
+                              </a>
+                            )}
+                            {member.facebook && (
+                              <a
+                                href={member.facebook}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Facebook profile of ${member.name}`}
+                              >
+                                <Button variant="ghost" size="icon" className="rounded-full bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700">
+                                  <Facebook className="w-6 h-6" />
+                                </Button>
+                              </a>
+                            )}
                           </div>
                           <div className="text-slate-700 text-sm md:text-base whitespace-pre-line leading-relaxed">
                             {member.bio}

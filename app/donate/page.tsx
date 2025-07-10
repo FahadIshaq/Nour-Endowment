@@ -5,6 +5,17 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, CheckCircle, Heart, TrendingUp, ArrowRight } from "lucide-react"
 
+// Declare custom element for GiveButter widget
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'givebutter-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        id: string;
+      };
+    }
+  }
+}
+
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
@@ -156,11 +167,10 @@ export default function DonatePage() {
                     </p>
                   </div>
 
-                  <motion.div {...scaleOnHover} className="mt-8">
-                    <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-lg py-6">
-                      Contribute Now
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
+                  <motion.div className="mt-8">
+                    <div className="w-full">
+                      <givebutter-widget id="jw83eL"></givebutter-widget>
+                    </div>
                   </motion.div>
                 </CardContent>
               </Card>
@@ -222,6 +232,60 @@ export default function DonatePage() {
                 </Card>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Student Application Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6">
+              Apply for{" "}
+              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                Funding
+              </span>
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Are you a student seeking educational support? Apply for funding through our endowment.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <Card className="max-w-2xl mx-auto p-8 bg-gradient-to-br from-emerald-50 to-teal-50 border-0 shadow-xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-slate-800 mb-4">Student Application Form</CardTitle>
+                <CardDescription className="text-lg text-slate-600">
+                  Complete the application form to be considered for educational funding from the Nour Endowment.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <motion.div {...scaleOnHover}>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=sharing&ouid=109140520801171154952"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-lg py-6">
+                      Apply for Funding
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </a>
+                </motion.div>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </section>

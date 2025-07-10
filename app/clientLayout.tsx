@@ -43,12 +43,7 @@ export default function ClientLayout({
             <div className="flex items-center justify-between">
               <Link href="/">
                 <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
-                  <div className="w-10 h-10 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                    Nour Endowment
-                  </span>
+                  <img src="/logo.png" alt="Nour Endowment" className="h-24 w-auto" />
                 </motion.div>
               </Link>
 
@@ -112,27 +107,24 @@ export default function ClientLayout({
         </motion.nav>
 
         {/* Main Content */}
-        <main className="pt-20">{children}</main>
+        <main className="pt-40">{children}</main>
 
         {/* Footer */}
-        <footer className="bg-slate-900 text-white py-16">
+        <footer className="bg-[#E5E1D8] text-white py-16">
           <div className="container mx-auto px-4">
             <div className="text-center">
               <Link href="/">
-                <div className="flex items-center justify-center space-x-2 mb-6">
-                  <div className="w-10 h-10 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-2xl font-bold">Nour Endowment</span>
+                <div className="flex items-center justify-center mb-6">
+                  <img src="/logo.png" alt="Nour Endowment" className="h-32 w-auto" />
                 </div>
               </Link>
-              <p className="text-slate-400 leading-relaxed max-w-2xl mx-auto mb-8">
-                Building a sustainable endowment to expand educational opportunities for historically marginalized and
+              <p className="text-[#5B6A3F] leading-relaxed max-w-2xl mx-auto mb-8">
+                Building a sustainable endowment to expand educational opportunities for marginalized and
                 under-resourced populations.
               </p>
               <div className="border-t border-slate-800 pt-8">
-                <p className="text-slate-400">
-                  © {new Date().getFullYear()} Nour Endowment. All rights reserved. | Tax ID: 99-3778982 (Wasla Connect)
+                <p className="text-[#5B6A3F]">
+                  © {new Date().getFullYear()} Nour Endowment. All rights reserved. | Tax ID: 99-3778982
                 </p>
               </div>
             </div>

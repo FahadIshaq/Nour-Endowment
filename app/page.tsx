@@ -49,18 +49,18 @@ export default function HomePage() {
               </motion.div>
 
               <motion.h1
-                className="text-5xl lg:text-6xl font-bold leading-tight"
+                className="text-4xl lg:text-5xl font-bold leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                <span className="text-slate-800">Building a</span>
+                <span className="text-slate-800">A Sustainable Endowment That</span>
                 <br />
                 <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                  Sustainable Future
+                  Reinvests In Marginalized
                 </span>
                 <br />
-                <span className="text-slate-600">Through Education</span>
+                <span className="text-slate-600">Communities Through Education</span>
               </motion.h1>
 
               <motion.p
@@ -138,7 +138,7 @@ export default function HomePage() {
           >
             {[
               {
-                number: "25+",
+                number: "50+",
                 label: "Committed Members",
                 description: "Growing community of supporters",
                 icon: UserCheck,
@@ -146,9 +146,9 @@ export default function HomePage() {
                 iconColor: "text-emerald-600"
               },
               {
-                number: "$1M+",
+                number: "$1B",
                 label: "Target Endowment",
-                description: "Building sustainable impact",
+                description: "We only use the returns for education",
                 icon: Target,
                 gradient: "from-blue-100 to-blue-300",
                 iconColor: "text-blue-600"
@@ -284,22 +284,22 @@ export default function HomePage() {
                 {
                   icon: Shield,
                   title: "Perpetual Impact",
-                  description: "Your principal is never touched - it grows forever while funding continuous change.",
-                },
-                {
-                  icon: CheckCircle,
-                  title: "Islamic Compliance",
-                  description: "Zakat-eligible, Sadaqah Jariyah qualified, with halal-certified investments.",
+                  description: "Your contribution is professionally and ethically invested.",
                 },
                 {
                   icon: BookOpen,
                   title: "Education Focus",
-                  description: "Specifically designed to expand educational access and opportunity.",
+                  description: "Investment returns fund education while your principal grows.",
                 },
                 {
                   icon: Award,
                   title: "Transparent Management",
-                  description: "Professional investment management with regular reporting and updates.",
+                  description: "Professional investment management with quarterly & annual reporting.",
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Compliance",
+                  description: "Zakat-eligible, Sadaqah Jariyah qualified, with halal-certified investments.",
                 },
               ].map((feature, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex items-start space-x-4">
@@ -318,7 +318,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

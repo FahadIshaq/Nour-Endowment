@@ -106,7 +106,7 @@ export default function AboutPage() {
                 <h3 className="text-3xl font-bold mb-6 text-slate-800">Why We Started Nour Endowment</h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Rather than offering short-term relief, we believe in building long term equitable systems that honor
-                  resilience and right to growth, education and opportunity. We are committed to building a sustainable
+                  resilience and right to growth through education and mentorship. We are committed to building a sustainable
                   financial foundation that expands educational access and long-term opportunities for communities
                   impacted by systemic displacement.
                 </p>
@@ -275,7 +275,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
