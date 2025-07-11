@@ -48,7 +48,7 @@ export default function AboutPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               Founded with a vision to create sustainable change through education and community empowerment, the Nour
-              Endowment has been at the forefront of transformative initiatives.
+              Endowment is at the forefront of transformative initiatives.
             </motion.p>
           </div>
         </div>
@@ -69,11 +69,9 @@ export default function AboutPage() {
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-2xl text-slate-700 max-w-5xl mx-auto leading-relaxed font-medium"
+              className="text-2xl text-slate-700 max-w-6xl mx-auto leading-relaxed font-medium"
             >
-              To Build a Lasting Endowment That Reinvests in the Future of Socially Disadvantaged Populations Through
-              Education, Infrastructure, and Opportunity
-            </motion.p>
+To Build a Sustainable Endowment That Reinvests In Marginalized Communities Through Education            </motion.p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
@@ -100,7 +98,7 @@ export default function AboutPage() {
               <motion.div variants={fadeInUp}>
                 <h3 className="text-3xl font-bold mb-6 text-slate-800">Why We Started Nour Endowment</h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                Rather than offering short-term relief, we believe in building long term equitable systems that honor resilience and right to growth, education and opportunity.  We are committed to building a sustainable financial foundation that expands educational access and long-term opportunities for communities impacted by systemic displacement.
+                Rather than offering short-term relief, we believe in building long term equitable systems that honor resilience and right to growth.  We are committed to building a sustainable financial foundation that expands educational access and long-term opportunities.
 
 
                 </p>
@@ -222,14 +220,14 @@ export default function AboutPage() {
             ))}
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             className="mt-20"
           >
-            <Card className="bg-white/70 backdrop-blur-lg border border-slate-200/60 rounded-3xl shadow-2xl p-8">
+            {/* <Card className="bg-white/70 backdrop-blur-lg border border-slate-200/60 rounded-3xl shadow-2xl p-8">
               <CardHeader className="text-center pb-6">
                 <CardTitle className="text-2xl font-bold mb-4 text-black">Core Principles</CardTitle>
               </CardHeader>
@@ -254,8 +252,8 @@ export default function AboutPage() {
                   ))}
                 </div>
               </CardContent>
-            </Card>
-          </motion.div>
+            </Card> */}
+          {/* </motion.div> */} 
         </div>
       </section>
 
@@ -271,7 +269,7 @@ export default function AboutPage() {
           >
             <h3 className="text-4xl font-bold mb-6">Ready to Make a Difference?</h3>
             <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Join us in our mission to create lasting positive change through education and community empowerment.
+              Join us in our mission to create lasting positive change through education.
             </p>
             <Link href="/donate">
               <motion.div {...scaleOnHover}>

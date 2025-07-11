@@ -190,7 +190,7 @@ export default function TeamPage() {
             <div className="flex justify-center mb-12">
               <div className="w-24 h-1 rounded-full bg-[#084120]" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:gap-0 gap-8 mx-auto">
               {[
                 {
                   name: "Imam Suleiman Hani",

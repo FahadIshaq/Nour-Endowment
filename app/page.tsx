@@ -191,7 +191,7 @@ export default function HomePage() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-6xl lg:text-7xl font-extrabold mb-4 text-[#084120] tracking-tight"
             >
-              25+
+              50+
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -321,19 +321,19 @@ export default function HomePage() {
               {
                 step: "01",
                 title: "You Contribute",
-                description: "Make a one-time or recurring donation to build the endowment principal.",
+                description: "Make a recurring donation to build the endowment principal.",
                 icon: Heart,
               },
               {
                 step: "02",
                 title: "We Invest",
-                description: "Your contribution is professionally invested using halal-compliant strategies.",
+                description: "Your contribution is professionally and ethically invested.",
                 icon: ArrowRight,
               },
               {
                 step: "03",
                 title: "Impact Forever",
-                description: "Investment returns fund education and opportunity while your principal grows.",
+                description: "Investment returns fund education while your principal grows.",
                 icon: Globe,
               },
             ].map((step, index) => (
@@ -446,7 +446,7 @@ export default function HomePage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl lg:text-2xl text-slate-600 mb-12 leading-relaxed"
             >
-              Nour Endowment preserves your contribution, using only the investment returns to support education and opportunity.
+              Nour Endowment preserves your contribution, using only the investment returns to support education.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -512,7 +512,7 @@ export default function HomePage() {
                 },
                 {
                   question: "What kind of impact will my contribution have?",
-                  answer: "Your gift helps fund projects that support education, infrastructure, and opportunity for marginalized communities. These are long-term investments that build stability and dignity creating a ripple effect across generations."
+                  answer: "Your gift helps fund projects that support education for marginalized communities. These are long-term investments that build stability creating a ripple effect across generations."
                 }
               ].map((faq, index) => (
                 <motion.div key={index} variants={fadeInUp}>

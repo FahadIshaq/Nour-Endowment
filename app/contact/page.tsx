@@ -43,13 +43,16 @@ export default function ContactPage() {
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    // For now, we'll just show the success modal
+    // Send form data to backend API
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    })
+    // Instantly show success modal (do not await fetch)
     setShowSuccessModal(true)
-    
-    // Reset form
     setFormData({
       firstName: '',
       lastName: '',

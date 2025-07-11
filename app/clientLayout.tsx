@@ -43,8 +43,8 @@ export default function ClientLayout({
             <div className="flex items-center justify-between">
               <Link href="/">
                 <motion.div className="flex items-center space-x-3" whileHover={{ scale: 1.05 }}>
-                  <img src="/logo.png" alt="Nour Endowment" className="h-24 w-auto" />
-                  <span className="text-2xl font-bold text-[#084120]">Nour Endowment</span>
+                  {/* <img src="/logo.png" alt="Nour Endowment" className="h-24 w-auto" /> */}
+                  <span className="text-3xl font-bold text-[#084120]">Nour Endowment</span>
                 </motion.div>
               </Link>
 
@@ -112,16 +112,16 @@ export default function ClientLayout({
 
         {/* Footer */}
         <footer className="bg-white text-white py-16">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto px-4">
             <div className="text-center">
               <Link href="/">
                 <div className="flex items-center justify-center mb-6">
-                  <img src="/logo.png" alt="Nour Endowment" className="h-32 w-auto" />
+                  <img src="/logo.png" alt="Nour Endowment" className="h-56 w-[22rem] sm:h-64 sm:w-[26rem] md:h-72 md:w-[32rem] lg:h-80 lg:w-[38rem] object-contain" />
                  
                 </div>
               </Link>
-              <p className="text-[#084120] leading-relaxed max-w-2xl mx-auto mb-8">
-              To Build a Lasting Endowment That Reinvests in the Future of Socially Disadvantaged Populations Through Education, Infrastructure, and Opportunity
+              <p className="text-[#084120] leading-relaxed mx-auto mb-8 font-bold">
+              A Sustainable Endowment That Reinvests In Marginalized Communities Through Education
 
               </p>
               <div className="border-t border-slate-800 pt-8">
