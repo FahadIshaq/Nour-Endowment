@@ -171,12 +171,7 @@ export default function ProjectsPage() {
                 description:
                   "Support students pursuing higher education through investments in scholarships, fellowships, and opportunities that foster academic and professional growth for individuals from diverse and underserved backgrounds.",
               },
-              {
-                icon: Globe,
-                title: "Global Impact",
-                description:
-                  "Create worldwide networks of opportunity that connect communities, share resources, and build sustainable pathways to educational and professional success.",
-              },
+              
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#084120]/20 bg-white">
@@ -201,7 +196,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Support CTA */}
-      <section className="py-20 bg-[#084120]">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

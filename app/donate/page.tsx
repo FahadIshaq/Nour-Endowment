@@ -159,9 +159,7 @@ export default function DonatePage() {
                       We'll share quarterly updates on how the fund is growing and what your support is making possible.
                     </p>
                     <p className="text-sm text-slate-600 leading-relaxed">
-                      All donations to Nour Endowment are tax-deductible and processed through our fiscal sponsor, Wasla
-                      Connect Tax ID: 99-3778982. Your bank statement will show "Nour Endowment," and 100% of your gift
-                      supports our work. We're currently awaiting our own 501(c)(3) status.
+                      All donations to Nour Endowment are tax-deductible and processed through our fiscal sponsor, Wasla Connect Tax ID: 99-3778982. Your bank statement will show "Nour Endowment," and 100% of your gift supports our work. We're currently awaiting our own 501(c)(3) status. No goods or services were provided in exchange for your donation. If you have any questions, feel free to contact us.
                     </p>
                   </div>
 

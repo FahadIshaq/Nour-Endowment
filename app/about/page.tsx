@@ -85,7 +85,7 @@ export default function AboutPage() {
             >
               <img
                 src="/3.jpg"
-                alt="Why We Started"
+                alt="Why We Started Nour Endowment"
                 className="rounded-2xl shadow-xl w-full"
               />
             </motion.div>
@@ -100,10 +100,9 @@ export default function AboutPage() {
               <motion.div variants={fadeInUp}>
                 <h3 className="text-3xl font-bold mb-6 text-slate-800">Why We Started Nour Endowment</h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Rather than offering short-term relief, we believe in building long term equitable systems that honor
-                  resilience and right to growth through education and mentorship. We are committed to building a sustainable
-                  financial foundation that expands educational access and long-term opportunities for communities
-                  impacted by systemic displacement.
+                Rather than offering short-term relief, we believe in building long term equitable systems that honor resilience and right to growth, education and opportunity.  We are committed to building a sustainable financial foundation that expands educational access and long-term opportunities for communities impacted by systemic displacement.
+
+
                 </p>
               </motion.div>
             </motion.div>

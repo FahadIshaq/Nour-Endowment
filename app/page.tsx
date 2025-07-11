@@ -3,9 +3,15 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Heart, ArrowRight, Award, Shield, CheckCircle, Globe, BookOpen, UserCheck, Target, Infinity } from "lucide-react"
+import { Heart, ArrowRight, Award, Shield, CheckCircle, Globe, BookOpen, UserCheck, Target, Infinity, HelpCircle } from "lucide-react"
 import Link from "next/link"
 import DonorVoicesCarousel from "@/components/DonorVoicesCarousel"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -168,6 +174,121 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Committed Members Section */}
+      <section className="py-20 bg-[#f9f7f1]">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="text-6xl lg:text-7xl font-extrabold mb-4 text-[#084120] tracking-tight"
+            >
+              25+
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-3xl lg:text-4xl font-bold mb-4 text-black"
+            >
+              Committed Members
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="text-xl text-slate-600"
+            >
+              People contributed so far
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Goal Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              Our Goal
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Building a sustainable endowment through three tiers of committed supporters
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          >
+            {[
+              {
+                number: "1,000",
+                title: "Founding Members",
+                description: "giving $1,000 a year",
+                color: "bg-[#084120]",
+                textColor: "text-[#084120]"
+              },
+              {
+                number: "100",
+                title: "Impact Partners",
+                description: "giving $10,000+",
+                color: "bg-[#084120]/80",
+                textColor: "text-[#084120]"
+              },
+              {
+                number: "10",
+                title: "Legacy Builders",
+                description: "giving $50,000+",
+                color: "bg-[#084120]/60",
+                textColor: "text-[#084120]"
+              }
+            ].map((tier, index) => (
+              <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
+                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#084120]/20 shadow-xl hover:shadow-[#084120]/20 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 w-full p-8 group overflow-hidden">
+                  {/* Decorative accent */}
+                  <div className={`absolute top-0 left-0 w-full h-2 rounded-t-3xl ${tier.color} opacity-70 group-hover:opacity-100 transition-all duration-300`} />
+                  
+                  {/* Number */}
+                  <div className={`text-5xl lg:text-6xl font-extrabold mb-4 ${tier.textColor} tracking-tight`}>
+                    {tier.number}
+                  </div>
+                  
+                  {/* Title */}
+                  <div className="text-2xl font-bold mb-2 text-black">
+                    {tier.title}
+                  </div>
+                  
+                  {/* Description */}
+                  <div className="text-slate-600 text-lg leading-relaxed">
+                    {tier.description}
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Donor Voices Carousel */}
       <DonorVoicesCarousel />
 
@@ -296,6 +417,117 @@ export default function HomePage() {
               ))}
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Gift Planting Section */}
+      <section className="py-20 bg-[#f9f7f1]">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="text-4xl lg:text-5xl font-bold mb-8 text-black"
+            >
+              Your gift isn't spent - it's planted.
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-xl lg:text-2xl text-slate-600 mb-12 leading-relaxed"
+            >
+              Nour Endowment preserves your contribution, using only the investment returns to support education and opportunity.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <Link href="/donate">
+                <motion.div {...scaleOnHover}>
+                  <Button
+                    size="lg"
+                    className="bg-[#084120] hover:bg-[#084120]/90 text-white text-lg px-8 py-6"
+                  >
+                    Support Now
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </motion.div>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <motion.div variants={fadeInUp} className="flex justify-center mb-6">
+              <div className="w-16 h-16 bg-[#084120] rounded-2xl flex items-center justify-center">
+                <HelpCircle className="w-8 h-8 text-white" />
+              </div>
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              Frequently Asked Questions
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Get answers to common questions about Nour Endowment and how your contribution creates lasting impact.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {[
+                {
+                  question: "How is my donation used and is the principal ever touched?",
+                  answer: "Your contribution is never spent. It's invested, and only the returns are used to fund initiatives. This ensures your gift creates a permanent, growing source of support every year."
+                },
+                {
+                  question: "Who manages the endowment and ensures transparency?",
+                  answer: "The endowment is managed by a team committed to ethical (halal) investing, financial transparency, and long-term sustainability. We provide regular updates and clear reporting so you know exactly how funds are being used and invested."
+                },
+                {
+                  question: "What kind of impact will my contribution have?",
+                  answer: "Your gift helps fund projects that support education, infrastructure, and opportunity for marginalized communities. These are long-term investments that build stability and dignity creating a ripple effect across generations."
+                }
+              ].map((faq, index) => (
+                <motion.div key={index} variants={fadeInUp}>
+                  <AccordionItem value={`item-${index}`} className="border border-[#084120]/20 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
+                    <AccordionTrigger className="px-6 py-4 text-left font-semibold text-black hover:text-[#084120] hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-slate-600 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
+              ))}
+            </Accordion>
+          </motion.div>
         </div>
       </section>
 
