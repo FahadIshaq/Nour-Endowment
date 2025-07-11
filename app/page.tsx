@@ -559,7 +559,7 @@ export default function HomePage() {
                   </Button>
                 </motion.div>
               </Link>
-              <Link href="/projects">
+              <Link href="/grants">
                 <motion.div {...scaleOnHover}>
                   <Button
                     size="lg"
