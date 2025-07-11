@@ -89,11 +89,11 @@ export default function ProjectsPage() {
               Apply for a Grant
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-4">
-              If you are a student who identifies as someone from a marginalized community and is aligned with our mission, we encourage you to apply for a scholarship.
+              If you are a student who identifies as someone from a marginalized community and is aligned with our mission, we encourage you to apply for a grant.
               <br />
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
                 <button className="mt-4 bg-[#084120] hover:bg-[#0a5a2c] text-white font-semibold py-3 px-8 rounded-xl text-lg shadow transition-all duration-300">
-                  Scholarship Application
+                  Grant Application
                 </button>
               </a>
             </motion.p>
