@@ -60,7 +60,7 @@ export default function ProjectsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Our Vision
+              Grants
             </motion.h1>
 
             <motion.p
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Empowering Futures through Education and Enduring Investment
+              At Nour Endowment, we are dedicated to increasing access to education, empowering our communities, and unlocking pathways to opportunity to create a sustainable cycle of self-reliance.
             </motion.p>
           </div>
         </div>
@@ -86,8 +86,17 @@ export default function ProjectsPage() {
             className="text-center mb-16"
           >
             <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
-              What We Fund
+              Apply for a Grant
             </motion.h2>
+            <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-4">
+              If you are a student who identifies as someone from a marginalized community and is aligned with our mission, we encourage you to apply for a scholarship.
+              <br />
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                <button className="mt-4 bg-[#084120] hover:bg-[#0a5a2c] text-white font-semibold py-3 px-8 rounded-xl text-lg shadow transition-all duration-300">
+                  Scholarship Application
+                </button>
+              </a>
+            </motion.p>
             <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
               At Nour Endowment, we are dedicated to investing in individuals, organizations, and initiatives that
               expand access to education, foster professional growth, and strengthen pathways to opportunity. Our goal
@@ -96,7 +105,7 @@ export default function ProjectsPage() {
             </motion.p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 md:gap-0 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -104,9 +113,9 @@ export default function ProjectsPage() {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="/5.jpg"
+                src="/new.jpg"
                 alt="What We Fund"
-                className="rounded-2xl shadow-xl w-full h-full"
+                className="rounded-2xl shadow-xl max-h-[500px] w-auto max-w-full object-contain mx-auto bg-white"
               />
             </motion.div>
 
@@ -227,7 +236,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Get Funded Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
@@ -343,7 +352,7 @@ export default function ProjectsPage() {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

@@ -92,7 +92,7 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Have questions about our programs? Want to partner with us? Ready to apply for funding?
+              Have questions about our programs? Want to partner with us? 
             </motion.p>
 
             <motion.div
@@ -109,7 +109,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
@@ -119,27 +119,27 @@ export default function ContactPage() {
             className="grid md:grid-cols-3 gap-8 mb-16"
           >
             {[
-              {
-                icon: Mail,
-                title: "Email Us",
-                description: "Send us a detailed message",
-                contact: "info@nourendowment.org",
-                action: "mailto:info@nourendowment.org"
-              },
-              {
-                icon: Phone,
-                title: "Call Us",
-                description: "Speak with our team directly",
-                contact: "+1 (555) 123-4567",
-                action: "tel:+15551234567"
-              },
-              {
-                icon: MapPin,
-                title: "Visit Us",
-                description: "Our main office location",
-                contact: "123 Main Street, City, State",
-                action: "#"
-              }
+              // {
+              //   icon: Mail,
+              //   title: "Email Us",
+              //   description: "Send us a detailed message",
+              //   contact: "info@nourendowment.org",
+              //   action: "mailto:info@nourendowment.org"
+              // },
+              // {
+              //   icon: Phone,
+              //   title: "Call Us",
+              //   description: "Speak with our team directly",
+              //   contact: "+1 (555) 123-4567",
+              //   action: "tel:+15551234567"
+              // },
+              // {
+              //   icon: MapPin,
+              //   title: "Visit Us",
+              //   description: "Our main office location",
+              //   contact: "123 Main Street, City, State",
+              //   action: "#"
+              // }
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="h-full bg-white border border-[#084120]/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group">
@@ -165,7 +165,7 @@ export default function ContactPage() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form Section */}
       <section className="py-20 bg-gradient-to-br from-[#084120]/5 to-white">
@@ -183,21 +183,27 @@ export default function ContactPage() {
                   Let's Start a Conversation
                 </h2>
                 <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                  Whether you have questions about our programs, want to explore partnership opportunities, or are ready to apply for funding, we're here to help.
+                  Whether you have general inquiries about the Nour Endowment, want to explore partnership opportunities, or have scholarship application questions, we’re here to help.
                 </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-[#084120] rounded-full"></div>
-                    <span className="text-slate-700">General inquiries and questions</span>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center">
+                      <Mail className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-black mb-1">Email Us</div>
+                      <a href="mailto:info@nourendowment.org" className="text-[#084120] hover:underline text-base">info@nourendowment.org</a>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-[#084120] rounded-full"></div>
-                    <span className="text-slate-700">Partnership opportunities</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-[#084120] rounded-full"></div>
-                    <span className="text-slate-700">Funding applications</span>
+                  <div className="flex items-center space-x-4">
+                    <a href="https://www.instagram.com/nourendowment/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#084120] hover:underline">
+                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/></svg>
+                      <span>Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/nour-endowment/about/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#084120] hover:underline">
+                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75s1.75.78 1.75 1.75s-.78 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47c-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54c3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+                      <span>LinkedIn</span>
+                    </a>
                   </div>
                 </div>
               </div>
