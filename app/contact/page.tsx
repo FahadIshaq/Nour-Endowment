@@ -5,7 +5,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { ArrowRight, Mail, Phone, MapPin, Clock, Send } from "lucide-react"
+import { ArrowRight, Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react"
+import { useState } from "react"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 const scaleOnHover = {
   whileHover: { scale: 1.05 },
@@ -27,6 +34,39 @@ const staggerContainer = {
 }
 
 export default function ContactPage() {
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Here you would typically send the form data to your backend
+    // For now, we'll just show the success modal
+    setShowSuccessModal(true)
+    
+    // Reset form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      subject: '',
+      message: ''
+    })
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
   return (
     <div>
       {/* Hero Section */}
@@ -188,48 +228,68 @@ export default function ContactPage() {
                   </div>
                 </CardHeader>
                 <CardContent className="px-0 pb-0">
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
                         <Input 
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
                           placeholder="John" 
                           className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                          required
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
                         <Input 
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
                           placeholder="Doe" 
                           className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                          required
                         />
                       </div>
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
                       <Input 
+                        name="email"
                         type="email" 
+                        value={formData.email}
+                        onChange={handleInputChange}
                         placeholder="john.doe@example.com" 
                         className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                        required
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
                       <Input 
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleInputChange}
                         placeholder="How can we help you?" 
                         className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                        required
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
                       <Textarea 
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
                         placeholder="Tell us about your inquiry, partnership interest, or funding needs..." 
                         rows={6} 
                         className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl resize-none" 
+                        required
                       />
                     </div>
                     <motion.div {...scaleOnHover}>
-                      <Button className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                      <Button type="submit" className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                         Send Message
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
@@ -241,6 +301,50 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Success Modal */}
+      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
+        <DialogContent className="max-w-md w-[95vw] bg-white/95 backdrop-blur-lg border-0 shadow-2xl rounded-3xl p-0 overflow-hidden">
+          <div className="flex flex-col items-center text-center p-8">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="w-20 h-20 rounded-full bg-[#084120] flex items-center justify-center mb-6 shadow-lg"
+            >
+              <CheckCircle className="w-10 h-10 text-white" />
+            </motion.div>
+            
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-black mb-2">
+                Message Sent Successfully!
+              </DialogTitle>
+            </DialogHeader>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-slate-600 mb-6 leading-relaxed"
+            >
+              Thank you for reaching out to us. We've received your message and will get back to you within 24 hours.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <Button
+                onClick={() => setShowSuccessModal(false)}
+                className="bg-[#084120] hover:bg-[#084120]/90 text-white px-8 py-3 rounded-xl"
+              >
+                Close
+              </Button>
+            </motion.div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

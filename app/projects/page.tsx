@@ -301,30 +301,25 @@ export default function ProjectsPage() {
                   <CardDescription>Tell us about your initiative and how it aligns with our mission.</CardDescription>
                 </CardHeader>
                 <CardContent className="px-0 pb-0">
-                  <form className="space-y-6">
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Name</label>
-                      <Input placeholder="Your full name" className="border-slate-200" />
+                  <div className="space-y-6">
+                    <div className="text-center py-8">
+                      <p className="text-slate-600 mb-6 leading-relaxed">
+                        We're excited to learn about your project and how it aligns with our mission to expand educational opportunities and create lasting impact in communities facing systemic barriers.
+                      </p>
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=sharing&ouid=109140520801171154952"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <motion.div {...scaleOnHover}>
+                          <Button className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6">
+                            Apply for Funding
+                            <ArrowRight className="ml-2 w-5 h-5" />
+                          </Button>
+                        </motion.div>
+                      </a>
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Email</label>
-                      <Input type="email" placeholder="your@email.com" className="border-slate-200" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Message</label>
-                      <Textarea
-                        placeholder="Describe your project, its goals, and how it aligns with our mission..."
-                        rows={6}
-                        className="border-slate-200"
-                      />
-                    </div>
-                    <motion.div {...scaleOnHover}>
-                      <Button className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6">
-                        Submit Application
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                      </Button>
-                    </motion.div>
-                  </form>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
