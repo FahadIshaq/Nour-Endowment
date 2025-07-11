@@ -121,8 +121,8 @@ export default function ClientLayout({
                 </div>
               </Link>
               <p className="text-[#084120] leading-relaxed max-w-2xl mx-auto mb-8">
-                Building a sustainable endowment to expand educational opportunities for marginalized and
-                under-resourced populations.
+              To Build a Lasting Endowment That Reinvests in the Future of Socially Disadvantaged Populations Through Education, Infrastructure, and Opportunity
+
               </p>
               <div className="border-t border-slate-800 pt-8">
                 <p className="text-[#084120]">
