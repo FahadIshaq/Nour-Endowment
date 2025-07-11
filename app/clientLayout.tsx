@@ -25,7 +25,7 @@ export default function ClientLayout({
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Projects", href: "/grants" },
+    { name: "Grants", href: "/grants" },
     { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
   ]
