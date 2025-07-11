@@ -199,19 +199,20 @@ export default function TeamPage() {
                   facebook: "https://www.facebook.com/imamsuleimanhani/",
                   bio: `Imam Suleiman Hani is a theologian and human-rights advocate who bridges classical Islamic scholarship with contemporary leadership. He serves as Dean of Academic Affairs at Al Maghrib Institute, guiding the learning of more than 300,000 students across six continents, and is a Research Fellow at Yaqeen Institute for Islamic Research. Holding master's degrees from Harvard University and the University of Jordan, he is completing his doctorate in leadership at New York University.\n\nGrounded in dozens of traditional ijāzahs in Qur'an memorization, ḥadīth sciences, and Islamic law, Imam Suleiman pairs that expertise with modern academic rigor to address today's ethical and social-justice challenges. Over the past decade he has lectured in 50+ countries, advised national and international organizations, and authored widely read books.\n\nHis scholarship and leadership perfectly align with Nour Endowment's mission to invest in education and community uplift, offering an authentic voice rooted in faith, justice, and global experience.`
                 },
-                {
-                  name: "Jawad Mourabet",
-                  role: "Advisory Board Member",
-                  image: "/jawad.avif",
-                  linkedin: "https://www.linkedin.com/in/jawadmourabet/",
-                  bio: `Jawad is an Engagement Manager at McKinsey & Company, advising financial institutions on technology strategy, with a focus on generative AI, cloud infrastructure, and team design. He previously held technology roles at Li & Fung, Verizon, and Cognizant.\n\nHe holds a Bachelors in Engineering from Stony Brook, a Master's in Civil Engineering from MIT, and an MBA from MIT Sloan, where he was an LGO Fellow.`
-                },
+                
                 {
                   name: "Diana Nassar",
                   role: "Advisory Board Member",
                   image: "/diana.avif",
                   linkedin: "https://www.linkedin.com/in/diananassar/",
                   bio: `Diana is a product leader at Prime Video with 10+ years of experience in technology, media, and e-commerce. She has led 0-to-1 innovations and large-scale launches at Souq, Aramex, and now across the US.\n\nDiana holds an MBA from Stanford, a Bachelor's in Computer Engineering from the University of Jordan, and is a TechWomen Fellow. She is passionate about using technology to create impact and empower others to drive change.`
+                },
+                {
+                  name: "Jawad Mourabet",
+                  role: "Advisory Board Member",
+                  image: "/jawad.avif",
+                  linkedin: "https://www.linkedin.com/in/jawadmourabet/",
+                  bio: `Jawad is an Engagement Manager at McKinsey & Company, advising financial institutions on technology strategy, with a focus on generative AI, cloud infrastructure, and team design. He previously held technology roles at Li & Fung, Verizon, and Cognizant.\n\nHe holds a Bachelors in Engineering from Stony Brook, a Master's in Civil Engineering from MIT, and an MBA from MIT Sloan, where he was an LGO Fellow.`
                 },
               ].map((member, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
