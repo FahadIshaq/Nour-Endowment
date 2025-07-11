@@ -8,7 +8,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Nour Endowment",
   description: "Building a sustainable endowment to expand educational opportunities.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({
