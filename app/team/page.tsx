@@ -181,7 +181,7 @@ export default function TeamPage() {
       </section>
 
       {/* Advisory Board Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-20 bg-[#f9f7f1]">
         <div className="container mx-auto px-4">
           <motion.div variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true }}>
             <motion.h3 variants={fadeInUp} className="text-4xl font-extrabold text-center mb-4 text-[#084120] drop-shadow-lg tracking-wide">

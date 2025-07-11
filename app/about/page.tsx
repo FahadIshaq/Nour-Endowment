@@ -159,7 +159,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-20 bg-[#f9f7f1]">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}

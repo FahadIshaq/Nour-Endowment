@@ -32,7 +32,7 @@ export default function ClientLayout({
 
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <body className="min-h-screen bg-[#f9f7f1]">
         {/* Navigation */}
         <motion.nav
           initial={{ opacity: 0, y: -20 }}

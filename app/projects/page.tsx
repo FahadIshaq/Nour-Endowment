@@ -131,7 +131,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Investment Areas */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-20 bg-[#f9f7f1]">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
@@ -279,7 +279,7 @@ export default function ProjectsPage() {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl"
+                    className="flex items-start space-x-4 p-6 bg-[#f9f7f1] rounded-2xl border border-[#084120]/20"
                     whileHover={{ x: 5 }}
                   >
                     <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
