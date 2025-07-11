@@ -135,7 +135,7 @@ export default function TeamPage() {
                       </motion.div>
                     </Card>
                     <DialogContent className="max-w-2xl w-[95vw] max-h-[90vh] bg-white/90 backdrop-blur-lg border-0 shadow-2xl rounded-3xl p-0 overflow-hidden">
-                      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 p-3 md:p-8">
+                      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 p-3 md:p-8 overflow-y-auto max-h-[70vh] hide-scrollbar">
                         <div className="w-full flex justify-center md:block md:w-auto mb-4 md:mb-0">
                           <img 
                             src={member.image} 
@@ -265,7 +265,7 @@ export default function TeamPage() {
                       </motion.div>
                     </Card>
                     <DialogContent className="max-w-2xl w-[95vw] max-h-[90vh] bg-white/90 backdrop-blur-lg border-0 shadow-2xl rounded-3xl p-0 overflow-hidden">
-                      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 p-3 md:p-8">
+                      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 p-3 md:p-8 overflow-y-auto max-h-[70vh] hide-scrollbar">
                         <div className="w-full flex justify-center md:block md:w-auto mb-4 md:mb-0">
                           <img 
                             src={member.image} 
