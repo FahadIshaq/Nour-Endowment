@@ -106,7 +106,7 @@ export default function DonatePage() {
                   className="flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl shadow-sm"
                   whileHover={{ x: 5 }}
                 >
-                  <div className="w-12 h-12 bg-[#5B6A3F] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -138,7 +138,7 @@ export default function DonatePage() {
                     ].map((tier, index) => (
                       <motion.div
                         key={index}
-                        className="p-6 rounded-2xl bg-[#5B6A3F] text-white cursor-pointer"
+                        className="p-6 rounded-2xl bg-[#084120] text-white cursor-pointer"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
@@ -256,7 +256,7 @@ export default function DonatePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <Card className="max-w-2xl mx-auto p-8 bg-white border border-[#5B6A3F]/20 shadow-xl">
+            <Card className="max-w-2xl mx-auto p-8 bg-white border border-[#084120]/20 shadow-xl">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-slate-800 mb-4">Student Application Form</CardTitle>
                 <CardDescription className="text-lg text-slate-600">
@@ -270,7 +270,7 @@ export default function DonatePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button className="w-full bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white text-lg py-6">
+                    <Button className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6">
                       Apply for Funding
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>

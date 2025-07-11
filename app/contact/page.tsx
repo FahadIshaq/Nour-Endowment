@@ -30,8 +30,8 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#5B6A3F]/10 via-[#5B6A3F]/5 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#5B6A3F]/5 to-[#5B6A3F]/3"></div>
+      <section className="py-20 bg-gradient-to-br from-[#084120]/10 via-[#084120]/5 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#084120]/5 to-[#084120]/3"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1
@@ -58,7 +58,7 @@ export default function ContactPage() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg"
             >
-              <Clock className="w-5 h-5 text-[#5B6A3F]" />
+              <Clock className="w-5 h-5 text-[#084120]" />
               <span className="text-slate-700 font-medium">We respond within 24 hours</span>
             </motion.div>
           </div>
@@ -99,10 +99,10 @@ export default function ContactPage() {
               }
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full bg-white border border-[#5B6A3F]/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                <Card className="h-full bg-white border border-[#084120]/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <CardHeader className="text-center pb-4">
                     <motion.div
-                      className="w-16 h-16 rounded-2xl bg-[#5B6A3F] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+                      className="w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
                     >
                       <item.icon className="w-8 h-8 text-white" />
                     </motion.div>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   <CardContent className="text-center">
                     <a 
                       href={item.action}
-                      className="text-lg font-semibold text-[#5B6A3F] hover:text-[#5B6A3F]/80 transition-colors"
+                      className="text-lg font-semibold text-[#084120] hover:text-[#084120]/80 transition-colors"
                     >
                       {item.contact}
                     </a>
@@ -125,7 +125,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-[#5B6A3F]/5 to-white">
+      <section className="py-20 bg-gradient-to-br from-[#084120]/5 to-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -145,24 +145,24 @@ export default function ContactPage() {
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-[#5B6A3F] rounded-full"></div>
+                    <div className="w-3 h-3 bg-[#084120] rounded-full"></div>
                     <span className="text-slate-700">General inquiries and questions</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-[#5B6A3F] rounded-full"></div>
+                    <div className="w-3 h-3 bg-[#084120] rounded-full"></div>
                     <span className="text-slate-700">Partnership opportunities</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-[#5B6A3F] rounded-full"></div>
+                    <div className="w-3 h-3 bg-[#084120] rounded-full"></div>
                     <span className="text-slate-700">Funding applications</span>
                   </div>
                 </div>
               </div>
 
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#5B6A3F]/10 to-[#5B6A3F]/5 rounded-3xl transform rotate-3"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#084120]/10 to-[#084120]/5 rounded-3xl transform rotate-3"></div>
                 <img
-                  src="/contact.jpg"
+                  src="/6.jpg"
                   alt="Contact Us"
                   className="relative rounded-3xl shadow-2xl max-w-full transform -rotate-1 hover:rotate-0 transition-transform duration-500"
                 />
@@ -175,10 +175,10 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="p-8 bg-white border border-[#5B6A3F]/20 rounded-3xl shadow-2xl">
+              <Card className="p-8 bg-white border border-[#084120]/20 rounded-3xl shadow-2xl">
                 <CardHeader className="px-0 pt-0 pb-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#5B6A3F] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-2xl bg-[#084120] flex items-center justify-center">
                       <Send className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -194,14 +194,14 @@ export default function ContactPage() {
                         <label className="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
                         <Input 
                           placeholder="John" 
-                          className="border-slate-200 focus:border-[#5B6A3F] focus:ring-[#5B6A3F]/20 rounded-xl h-12" 
+                          className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
                         <Input 
                           placeholder="Doe" 
-                          className="border-slate-200 focus:border-[#5B6A3F] focus:ring-[#5B6A3F]/20 rounded-xl h-12" 
+                          className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
                         />
                       </div>
                     </div>
@@ -210,14 +210,14 @@ export default function ContactPage() {
                       <Input 
                         type="email" 
                         placeholder="john.doe@example.com" 
-                        className="border-slate-200 focus:border-[#5B6A3F] focus:ring-[#5B6A3F]/20 rounded-xl h-12" 
+                        className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
                       <Input 
                         placeholder="How can we help you?" 
-                        className="border-slate-200 focus:border-[#5B6A3F] focus:ring-[#5B6A3F]/20 rounded-xl h-12" 
+                        className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
                       />
                     </div>
                     <div>
@@ -225,11 +225,11 @@ export default function ContactPage() {
                       <Textarea 
                         placeholder="Tell us about your inquiry, partnership interest, or funding needs..." 
                         rows={6} 
-                        className="border-slate-200 focus:border-[#5B6A3F] focus:ring-[#5B6A3F]/20 rounded-xl resize-none" 
+                        className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl resize-none" 
                       />
                     </div>
                     <motion.div {...scaleOnHover}>
-                      <Button className="w-full bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                      <Button className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                         Send Message
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>

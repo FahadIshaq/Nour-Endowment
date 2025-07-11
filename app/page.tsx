@@ -40,7 +40,7 @@ export default function HomePage() {
               className="space-y-8"
             >
               <motion.div
-                className="inline-block px-4 py-2 bg-[#5B6A3F] text-white rounded-full text-sm font-medium"
+                className="inline-block px-4 py-2 bg-[#084120] text-white rounded-full text-sm font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -77,7 +77,7 @@ export default function HomePage() {
                   <motion.div {...scaleOnHover}>
                     <Button
                       size="lg"
-                      className="bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white text-lg px-8 py-6"
+                      className="bg-[#084120] hover:bg-[#084120]/90 text-white text-lg px-8 py-6"
                     >
                       Start Contributing
                       <ArrowRight className="ml-2 w-5 h-5" />
@@ -104,16 +104,16 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative h-full"
             >
-              <div className="relative z-10">
+              <div className="relative z-10 w-full h-full">
                 <motion.img
-                  src="/image1.png"
+                  src="/1.jpg"
                   alt="Educational Impact"
-                  className="rounded-2xl shadow-2xl w-full"
+                  className="rounded-2xl shadow-2xl w-full h-full object-cover"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-full h-full bg-[#5B6A3F]/20 rounded-2xl -z-10"></div>
+              <div className="absolute -top-4 -right-4 w-full h-full bg-[#084120]/20 rounded-2xl -z-10"></div>
             </motion.div>
           </div>
         </div>
@@ -151,14 +151,14 @@ export default function HomePage() {
               },
             ].map((stat, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
-                <Card className="flex flex-col items-center text-center rounded-2xl bg-white border border-[#5B6A3F]/20 shadow-lg hover:shadow-[#5B6A3F]/20 transition-all duration-300 w-full max-w-[320px] p-4 sm:p-6 relative overflow-hidden group">
+                <Card className="flex flex-col items-center text-center rounded-2xl bg-white border border-[#084120]/20 shadow-lg hover:shadow-[#084120]/20 transition-all duration-300 w-full max-w-[320px] p-4 sm:p-6 relative overflow-hidden group">
                   {/* Accent bar */}
-                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl bg-[#5B6A3F] opacity-70 group-hover:opacity-100 transition-all duration-300" />
+                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl bg-[#084120] opacity-70 group-hover:opacity-100 transition-all duration-300" />
                   {/* Icon */}
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#5B6A3F] mb-3 mt-3 shadow ring-2 ring-white/60">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#084120] mb-3 mt-3 shadow ring-2 ring-white/60">
                     <stat.icon className="w-6 h-6 text-white drop-shadow" />
                   </div>
-                  <div className="text-3xl font-extrabold mb-1 text-[#5B6A3F] tracking-wide">{stat.number}</div>
+                  <div className="text-3xl font-extrabold mb-1 text-[#084120] tracking-wide">{stat.number}</div>
                   <div className="text-base font-semibold text-black mb-1 tracking-wider">{stat.label}</div>
                   <div className="text-slate-500 text-sm">{stat.description}</div>
                 </Card>
@@ -217,14 +217,14 @@ export default function HomePage() {
               },
             ].map((step, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
-                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#5B6A3F]/20 shadow-xl hover:shadow-[#5B6A3F]/20 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs p-8 group overflow-hidden">
+                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#084120]/20 shadow-xl hover:shadow-[#084120]/20 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs p-8 group overflow-hidden">
                   {/* Floating Icon with Glow */}
-                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-[#5B6A3F] opacity-80 blur-md" />
-                  <div className="relative z-20 w-16 h-16 rounded-2xl bg-[#5B6A3F] flex items-center justify-center mb-4 mx-auto shadow-lg">
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-[#084120] opacity-80 blur-md" />
+                  <div className="relative z-20 w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center mb-4 mx-auto shadow-lg">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
                   {/* Step Number */}
-                  <div className="text-5xl font-extrabold text-[#5B6A3F] mb-2 drop-shadow-lg">{step.step}</div>
+                  <div className="text-5xl font-extrabold text-[#084120] mb-2 drop-shadow-lg">{step.step}</div>
                   <div className="text-xl font-bold mb-2 text-black">{step.title}</div>
                   <div className="text-slate-600 leading-relaxed text-center">{step.description}</div>
                 </Card>
@@ -245,7 +245,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="/clild.jpg"
+                src="/2.jpg"
                 alt="Why Choose Nour Endowment"
                 className="rounded-2xl shadow-xl w-full"
               />
@@ -285,7 +285,7 @@ export default function HomePage() {
                 },
               ].map((feature, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#5B6A3F] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -320,7 +320,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="secondary"
-                    className="text-lg px-8 py-6 bg-white text-[#5B6A3F] hover:bg-slate-100"
+                    className="text-lg px-8 py-6 bg-white text-[#084120] hover:bg-slate-100"
                   >
                     Start Contributing
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -332,7 +332,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-[#5B6A3F] bg-transparent"
+                    className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-[#084120] bg-transparent"
                   >
                     See Our Projects
                   </Button>

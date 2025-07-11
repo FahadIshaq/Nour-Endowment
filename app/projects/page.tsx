@@ -46,7 +46,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              className="inline-block px-4 py-2 bg-[#5B6A3F] text-white rounded-full text-sm font-medium mb-6"
+              className="inline-block px-4 py-2 bg-[#084120] text-white rounded-full text-sm font-medium mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="/donations.jpg"
+                src="/5.jpg"
                 alt="What We Fund"
                 className="rounded-2xl shadow-xl w-full h-full"
               />
@@ -179,10 +179,10 @@ export default function ProjectsPage() {
               },
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#5B6A3F]/20 bg-white">
+                <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#084120]/20 bg-white">
                   <CardHeader>
                     <motion.div
-                      className="w-16 h-16 rounded-2xl bg-[#5B6A3F] flex items-center justify-center mb-4"
+                      className="w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center mb-4"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
@@ -201,7 +201,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Support CTA */}
-      <section className="py-20 bg-[#5B6A3F]">
+      <section className="py-20 bg-[#084120]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -220,7 +220,7 @@ export default function ProjectsPage() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="text-lg px-8 py-6 bg-white text-[#5B6A3F] hover:bg-slate-100"
+                  className="text-lg px-8 py-6 bg-white text-[#084120] hover:bg-slate-100"
                 >
                   Support Now
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -282,7 +282,7 @@ export default function ProjectsPage() {
                     className="flex items-start space-x-4 p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="w-12 h-12 bg-[#5B6A3F] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -324,7 +324,7 @@ export default function ProjectsPage() {
                       />
                     </div>
                     <motion.div {...scaleOnHover}>
-                      <Button className="w-full bg-[#5B6A3F] hover:bg-[#5B6A3F]/90 text-white text-lg py-6">
+                      <Button className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6">
                         Submit Application
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
@@ -346,7 +346,7 @@ export default function ProjectsPage() {
             <Link href="/contact">
               <Button
                 variant="outline"
-                className="border-[#5B6A3F] text-[#5B6A3F] hover:bg-[#5B6A3F]/10 bg-transparent"
+                className="border-[#084120] text-[#084120] hover:bg-[#084120]/10 bg-transparent"
               >
                 Contact Us Here
               </Button>
