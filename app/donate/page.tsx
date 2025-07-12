@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, CheckCircle, Heart, TrendingUp, ArrowRight } from "lucide-react"
+import { useState, useEffect } from "react"
 
 // Declare custom element for GiveButter widget
 declare global {
@@ -11,6 +12,7 @@ declare global {
     interface IntrinsicElements {
       'givebutter-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
         id: string;
+        account?: string;
       };
     }
   }
@@ -36,6 +38,45 @@ const scaleOnHover = {
 }
 
 export default function DonatePage() {
+  const [scriptLoaded, setScriptLoaded] = useState(false)
+  const [widgetError, setWidgetError] = useState(false)
+
+  // Ensure Givebutter script is loaded
+  useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src*="givebutter.com"]')
+    if (existingScript) {
+      setScriptLoaded(true)
+      return
+    }
+
+    // Check if window.givebutter is already available
+    if (typeof window !== 'undefined' && (window as any).givebutter) {
+      setScriptLoaded(true)
+      return
+    }
+
+    const script = document.createElement('script')
+    script.src = 'https://widgets.givebutter.com/latest.umd.cjs?acct=f8kaScYwTtpnbut7&p=other'
+    script.async = true
+    
+    script.onload = () => {
+      console.log('Givebutter script loaded successfully on donate page')
+      setScriptLoaded(true)
+    }
+    
+    script.onerror = (error) => {
+      console.error('Failed to load Givebutter script on donate page:', error)
+      setWidgetError(true)
+    }
+
+    document.head.appendChild(script)
+
+    return () => {
+      // Don't remove script on unmount as it might be used by other components
+    }
+  }, [])
+
   return (
     <div>
       {/* Hero Section */}
@@ -66,8 +107,8 @@ export default function DonatePage() {
       {/* Donation Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Giving Tiers - Left Side */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Left: Giving Tiers and Tax and Transparency inside one card */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -80,7 +121,8 @@ export default function DonatePage() {
                   <CardDescription>Make your donation monthly or annual to help grow the endowment.</CardDescription>
                 </CardHeader>
                 <CardContent className="px-0 pb-0">
-                  <div className="space-y-6">
+                  {/* Tiers List */}
+                  <div className="space-y-6 mb-8">
                     {[
                       { tier: "Founding Member", amount: "$1,000/year" },
                       { tier: "Impact Partner", amount: "$10,000+" },
@@ -102,7 +144,7 @@ export default function DonatePage() {
                       </motion.div>
                     ))}
                   </div>
-
+                  {/* Tax and Transparency */}
                   <div className="mt-8 p-6 bg-slate-50 rounded-2xl">
                     <h4 className="font-bold text-slate-800 mb-4">Tax and Transparency</h4>
                     <p className="text-sm text-slate-600 leading-relaxed mb-4">
@@ -116,65 +158,82 @@ export default function DonatePage() {
               </Card>
             </motion.div>
 
-            {/* Information Section - Right Side */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              <div className="w-full my-8 self-center mx-auto">
-                <div 
-                  dangerouslySetInnerHTML={{ 
-                    __html: '<givebutter-widget id="jw83eL"></givebutter-widget>' 
-                  }} 
-                />
+            {/* Right: Widget only */}
+            <div className="flex justify-center items-start w-full">
+              <div className="w-full max-w-lg">
+                {/* Donation Widget */}
+                {!scriptLoaded && !widgetError && (
+                  <div className="flex items-center justify-center p-8 bg-slate-50 rounded-lg w-full">
+                    <div className="text-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#084120] mx-auto mb-2"></div>
+                      <p className="text-slate-600">Loading donation form...</p>
+                    </div>
+                  </div>
+                )}
+                {widgetError && (
+                  <div className="p-6 bg-red-50 border border-red-200 rounded-lg text-center w-full">
+                    <p className="text-red-600 mb-2">Unable to load donation form</p>
+                    <p className="text-sm text-red-500">Please refresh the page or try again later.</p>
+                  </div>
+                )}
+                {scriptLoaded && !widgetError && (
+                  <div
+                    className="w-full min-h-[400px]"
+                    dangerouslySetInnerHTML={{
+                      __html: '<givebutter-widget id="jw83eL" account="f8kaScYwTtpnbut7"></givebutter-widget>'
+                    }}
+                  />
+                )}
               </div>
-              {[
-                {
-                  icon: Shield,
-                  title: "How Gifts are Managed?",
-                  content:
-                    "All donations are professionally invested by a certified outsourced Chief Investment Officer (OCIO). This ensures long-term growth, transparency, and stewardship of every dollar.",
-                },
-                {
-                  icon: CheckCircle,
-                  title: "Is the Donation Zakat Eligible?",
-                  content:
-                    "This endowment is structured to be Zakat-eligible in accordance with Islamic principles. Please consult your scholar or reach out to us for details.",
-                },
-                {
-                  icon: Heart,
-                  title: "Is this Sadaqah Jariyah?",
-                  content:
-                    "This endowment qualifies as Sadaqah Jariyah. A continuous charity that benefits others for generations. Halal Certified investments.",
-                },
-                {
-                  icon: TrendingUp,
-                  title: "Use of Funds?",
-                  content:
-                    "Only the investment returns are used to fund initiatives. Your principal gift remains untouched allowing it to grow and create an impact forever.",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start space-x-4 p-6 bg-[#f9f7f1] rounded-2xl shadow-sm border border-[#084120]/20"
-                  whileHover={{ x: 5 }}
-                >
-                  <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-2">{item.title}</h4>
-                    <p className="text-slate-600 leading-relaxed">{item.content}</p>
-                  </div>
-                </motion.div>
-              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Donation Widget */}
-              
-            </motion.div>
+      {/* Info Cards Section */}
+      <section className="py-16 bg-[#f9f7f1]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
+            {[
+              {
+                icon: Shield,
+                title: "How Gifts are Managed?",
+                content:
+                  "All donations are professionally invested by a certified outsourced Chief Investment Officer (OCIO). This ensures long-term growth, transparency, and stewardship of every dollar.",
+              },
+              {
+                icon: CheckCircle,
+                title: "Is the Donation Zakat Eligible?",
+                content:
+                  "This endowment is structured to be Zakat-eligible in accordance with Islamic principles. Please consult your scholar or reach out to us for details.",
+              },
+              {
+                icon: Heart,
+                title: "Is this Sadaqah Jariyah?",
+                content:
+                  "This endowment qualifies as Sadaqah Jariyah. A continuous charity that benefits others for generations. Halal Certified investments.",
+              },
+              {
+                icon: TrendingUp,
+                title: "Use of Funds?",
+                content:
+                  "Only the investment returns are used to fund initiatives. Your principal gift remains untouched allowing it to grow and create an impact forever.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-sm border border-[#084120]/20"
+                whileHover={{ x: 5 }}
+              >
+                <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-800 mb-2">{item.title}</h4>
+                  <p className="text-slate-600 leading-relaxed">{item.content}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

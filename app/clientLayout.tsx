@@ -15,6 +15,7 @@ declare global {
     interface IntrinsicElements {
       'givebutter-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
         id: string;
+        account?: string;
       };
     }
   }
@@ -33,19 +34,35 @@ export default function ClientLayout({
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  // Load Givebutter script
+  // Load Givebutter script with better mobile support
   useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src*="givebutter.com"]')
+    if (existingScript) {
+      return
+    }
+
+    // Check if window.givebutter is already available
+    if (typeof window !== 'undefined' && (window as any).givebutter) {
+      return
+    }
+
     const script = document.createElement('script')
     script.src = 'https://widgets.givebutter.com/latest.umd.cjs?acct=f8kaScYwTtpnbut7&p=other'
     script.async = true
+    
+    script.onload = () => {
+      console.log('Givebutter script loaded successfully in layout')
+    }
+    
+    script.onerror = (error) => {
+      console.error('Failed to load Givebutter script in layout:', error)
+    }
+
     document.head.appendChild(script)
 
     return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src*="givebutter.com"]')
-      if (existingScript) {
-        document.head.removeChild(existingScript)
-      }
+      // Don't remove script on unmount as it might be used by other components
     }
   }, [])
 
