@@ -163,11 +163,12 @@ export default function DonatePage() {
                     </p>
                   </div>
 
-                  <motion.div className="mt-8">
-                    <div className="w-full">
-                      <givebutter-widget id="jw83eL"></givebutter-widget>
-                    </div>
-                  </motion.div>
+                  {/* Donation Widget */}
+                  <div className="w-full flex justify-center my-8">
+                    <givebutter-widget id="jw83eL"></givebutter-widget>
+                  </div>
+                  {/* Floating Button Widget (for demo, also on this page) */}
+                  <givebutter-widget id="gBd88j"></givebutter-widget>
                 </CardContent>
               </Card>
             </motion.div>

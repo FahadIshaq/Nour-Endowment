@@ -175,7 +175,7 @@ export default function HomePage() {
       </section>
 
       {/* Committed Members Section */}
-      <section className="py-20 bg-[#f9f7f1]">
+      {/* <section className="py-20 bg-[#f9f7f1]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -213,7 +213,7 @@ export default function HomePage() {
             </motion.p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Goal Section */}
       <section className="py-20 bg-white">
