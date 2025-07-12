@@ -6,8 +6,19 @@ import { Button } from "@/components/ui/button"
 import { Heart, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./globals.css"
+
+// Declare custom element for GiveButter widget
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'givebutter-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        id: string;
+      };
+    }
+  }
+}
 
 const scaleOnHover = {
   whileHover: { scale: 1.05 },
@@ -21,6 +32,22 @@ export default function ClientLayout({
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  // Load Givebutter script
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://widgets.givebutter.com/latest.umd.cjs?acct=f8kaScYwTtpnbut7&p=other'
+    script.async = true
+    document.head.appendChild(script)
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src*="givebutter.com"]')
+      if (existingScript) {
+        document.head.removeChild(existingScript)
+      }
+    }
+  }, [])
 
   const navigation = [
     { name: "Home", href: "/" },

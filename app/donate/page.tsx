@@ -67,59 +67,9 @@ export default function DonatePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
-            {/* Information Section */}
+            {/* Giving Tiers - Left Side */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              {[
-                {
-                  icon: Shield,
-                  title: "How Gifts are Managed?",
-                  content:
-                    "All donations are professionally invested by a certified outsourced Chief Investment Officer (OCIO). This ensures long-term growth, transparency, and stewardship of every dollar.",
-                },
-                {
-                  icon: CheckCircle,
-                  title: "Is the Donation Zakat Eligible?",
-                  content:
-                    "This endowment is structured to be Zakat-eligible in accordance with Islamic principles. Please consult your scholar or reach out to us for details.",
-                },
-                {
-                  icon: Heart,
-                  title: "Is this Sadaqah Jariyah?",
-                  content:
-                    "This endowment qualifies as Sadaqah Jariyah. A continuous charity that benefits others for generations. Halal Certified investments.",
-                },
-                {
-                  icon: TrendingUp,
-                  title: "Use of Funds?",
-                  content:
-                    "Only the investment returns are used to fund initiatives. Your principal gift remains untouched allowing it to grow and create an impact forever.",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start space-x-4 p-6 bg-[#f9f7f1] rounded-2xl shadow-sm border border-[#084120]/20"
-                  whileHover={{ x: 5 }}
-                >
-                  <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-2">{item.title}</h4>
-                    <p className="text-slate-600 leading-relaxed">{item.content}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* Giving Tiers */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -162,15 +112,68 @@ export default function DonatePage() {
                       All donations to Nour Endowment are tax-deductible and processed through our fiscal sponsor, Wasla Connect Tax ID: 99-3778982. Your bank statement will show "Nour Endowment," and 100% of your gift supports our work. We're currently awaiting our own 501(c)(3) status. No goods or services were provided in exchange for your donation. If you have any questions, feel free to contact us.
                     </p>
                   </div>
-
-                  {/* Donation Widget */}
-                  <div className="w-full flex justify-center my-8">
-                    <givebutter-widget id="jw83eL"></givebutter-widget>
-                  </div>
-                  {/* Floating Button Widget (for demo, also on this page) */}
-                  <givebutter-widget id="gBd88j"></givebutter-widget>
                 </CardContent>
               </Card>
+            </motion.div>
+
+            {/* Information Section - Right Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div className="w-full my-8 self-center mx-auto">
+                <div 
+                  dangerouslySetInnerHTML={{ 
+                    __html: '<givebutter-widget id="jw83eL"></givebutter-widget>' 
+                  }} 
+                />
+              </div>
+              {[
+                {
+                  icon: Shield,
+                  title: "How Gifts are Managed?",
+                  content:
+                    "All donations are professionally invested by a certified outsourced Chief Investment Officer (OCIO). This ensures long-term growth, transparency, and stewardship of every dollar.",
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Is the Donation Zakat Eligible?",
+                  content:
+                    "This endowment is structured to be Zakat-eligible in accordance with Islamic principles. Please consult your scholar or reach out to us for details.",
+                },
+                {
+                  icon: Heart,
+                  title: "Is this Sadaqah Jariyah?",
+                  content:
+                    "This endowment qualifies as Sadaqah Jariyah. A continuous charity that benefits others for generations. Halal Certified investments.",
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Use of Funds?",
+                  content:
+                    "Only the investment returns are used to fund initiatives. Your principal gift remains untouched allowing it to grow and create an impact forever.",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start space-x-4 p-6 bg-[#f9f7f1] rounded-2xl shadow-sm border border-[#084120]/20"
+                  whileHover={{ x: 5 }}
+                >
+                  <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 mb-2">{item.title}</h4>
+                    <p className="text-slate-600 leading-relaxed">{item.content}</p>
+                  </div>
+                </motion.div>
+              ))}
+
+              {/* Donation Widget */}
+              
             </motion.div>
           </div>
         </div>
@@ -231,7 +234,7 @@ export default function DonatePage() {
       </section>
 
       {/* Student Application Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
@@ -279,7 +282,7 @@ export default function DonatePage() {
             </Card>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

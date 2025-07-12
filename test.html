@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    
+    <!-- Use your exact script URL without async -->
+    <script src="https://widgets.givebutter.com/latest.umd.cjs?acct=f8kaScYwTtpnbut7&p=other"></script>
+    
+    <!-- Backup: Try loading synchronously -->
+    <script>
+        // Additional debug info
+        console.log('Attempting to load Givebutter widgets...');
+        console.log('Current domain:', window.location.hostname);
+        console.log('Script URL test:', 'https://widgets.givebutter.com/latest.umd.cjs?acct=f8kaScYwTtpnbut7&p=other');
+        
+        // Check if we can access the domain
+        fetch('https://widgets.givebutter.com/latest.umd.cjs?acct=f8kaScYwTtpnbut7&p=other', {mode: 'no-cors'})
+            .then(() => console.log('Script URL is accessible'))
+            .catch(err => console.error('Script URL not accessible:', err));
+    </script>
+    
+    <style>
+        /* Debug styles to make widgets visible */
+        givebutter-widget {
+            display: block;
+            border: 2px dashed #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 50px;
+            background-color: #f9f9f9;
+        }
+        
+        givebutter-widget:before {
+            content: "Givebutter Widget (ID: " attr(id) ")";
+            display: block;
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .donation-section {
+            margin: 30px 0;
+        }
+        
+        .donation-widget {
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .setup-instructions {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        
+        .setup-instructions h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        .setup-instructions ol {
+            margin-left: 20px;
+        }
+        
+        .setup-instructions code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support Our Cause</h1>
+        
+        <div class="description">
+            <p>Your donation makes a difference. Every contribution helps us continue our important work and reach more people in need.</p>
+        </div>
+        
+        <div class="donation-section">
+            <h2>Make a Donation</h2>
+            <div class="donation-widget">
+                <givebutter-widget id="jw83eL" account="f8kaScYwTtpnbut7"></givebutter-widget>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating donation button -->
+    <givebutter-widget id="gBd88j" account="f8kaScYwTtpnbut7"></givebutter-widget>
+    
+    <!-- Debug script -->
+    <script>
+        // Check if widgets are loading
+        setTimeout(() => {
+            const widgets = document.querySelectorAll('givebutter-widget');
+            console.log('Found', widgets.length, 'widgets on page');
+            
+            widgets.forEach((widget, index) => {
+                console.log(`Widget ${index + 1}:`, widget.id, widget.innerHTML || 'No content');
+            });
+            
+            // Check if Givebutter is loaded
+            if (typeof window.GivebutterWidgets !== 'undefined') {
+                console.log('Givebutter library loaded successfully');
+            } else {
+                console.error('Givebutter library not found');
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
