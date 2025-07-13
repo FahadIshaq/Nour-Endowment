@@ -73,8 +73,8 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#084120]/10 via-[#084120]/5 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#084120]/5 to-[#084120]/3"></div>
+      <section className="py-20 bg-gradient-to-br from-[#116b36]/10 via-[#116b36]/5 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#116b36]/5 to-[#116b36]/3"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1
@@ -101,7 +101,7 @@ export default function ContactPage() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg"
             >
-              <Clock className="w-5 h-5 text-[#084120]" />
+              <Clock className="w-5 h-5 text-[#116b36]" />
               <span className="text-slate-700 font-medium">We respond within 24 hours</span>
             </motion.div>
           </div>
@@ -142,10 +142,10 @@ export default function ContactPage() {
               // }
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full bg-white border border-[#084120]/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                <Card className="h-full bg-white border border-[#116b36]/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <CardHeader className="text-center pb-4">
                     <motion.div
-                      className="w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+                      className="w-16 h-16 rounded-2xl bg-[#116b36] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
                     >
                       <item.icon className="w-8 h-8 text-white" />
                     </motion.div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   <CardContent className="text-center">
                     <a 
                       href={item.action}
-                      className="text-lg font-semibold text-[#084120] hover:text-[#084120]/80 transition-colors"
+                      className="text-lg font-semibold text-[#116b36] hover:text-[#116b36]/80 transition-colors"
                     >
                       {item.contact}
                     </a>
@@ -168,7 +168,7 @@ export default function ContactPage() {
       </section> */}
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-[#084120]/5 to-white">
+      <section className="py-20 bg-gradient-to-br from-[#116b36]/5 to-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -187,20 +187,20 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-2xl bg-[#116b36] flex items-center justify-center">
                       <Mail className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <div className="text-lg font-bold text-black mb-1">Email Us</div>
-                      <a href="mailto:info@nourendowment.org" className="text-[#084120] hover:underline text-base">info@nourendowment.org</a>
+                      <a href="mailto:info@nourendowment.org" className="text-[#116b36] hover:underline text-base">info@nourendowment.org</a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <a href="https://www.instagram.com/nourendowment/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#084120] hover:underline">
+                    <a href="https://www.instagram.com/nourendowment/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#116b36] hover:underline">
                       <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/></svg>
                       <span>Instagram</span>
                     </a>
-                    <a href="https://www.linkedin.com/company/nour-endowment/about/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#084120] hover:underline">
+                    <a href="https://www.linkedin.com/company/nour-endowment/about/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#116b36] hover:underline">
                       <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75s1.75.78 1.75 1.75s-.78 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47c-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54c3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
                       <span>LinkedIn</span>
                     </a>
@@ -209,7 +209,7 @@ export default function ContactPage() {
               </div>
 
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#084120]/10 to-[#084120]/5 rounded-3xl transform rotate-3"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#116b36]/10 to-[#116b36]/5 rounded-3xl transform rotate-3"></div>
                 <img
                   src="/6.jpg"
                   alt="Contact Us"
@@ -224,10 +224,10 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="p-8 bg-white border border-[#084120]/20 rounded-3xl shadow-2xl">
+              <Card className="p-8 bg-white border border-[#116b36]/20 rounded-3xl shadow-2xl">
                 <CardHeader className="px-0 pt-0 pb-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#084120] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-2xl bg-[#116b36] flex items-center justify-center">
                       <Send className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                           value={formData.firstName}
                           onChange={handleInputChange}
                           placeholder="John" 
-                          className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                          className="border-slate-200 focus:border-[#116b36] focus:ring-[#116b36]/20 rounded-xl h-12" 
                           required
                         />
                       </div>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           placeholder="Doe" 
-                          className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                          className="border-slate-200 focus:border-[#116b36] focus:ring-[#116b36]/20 rounded-xl h-12" 
                           required
                         />
                       </div>
@@ -270,7 +270,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="john.doe@example.com" 
-                        className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                        className="border-slate-200 focus:border-[#116b36] focus:ring-[#116b36]/20 rounded-xl h-12" 
                         required
                       />
                     </div>
@@ -281,7 +281,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleInputChange}
                         placeholder="How can we help you?" 
-                        className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl h-12" 
+                        className="border-slate-200 focus:border-[#116b36] focus:ring-[#116b36]/20 rounded-xl h-12" 
                         required
                       />
                     </div>
@@ -293,12 +293,12 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         placeholder="Tell us about your inquiry, partnership interest, or funding needs..." 
                         rows={6} 
-                        className="border-slate-200 focus:border-[#084120] focus:ring-[#084120]/20 rounded-xl resize-none" 
+                        className="border-slate-200 focus:border-[#116b36] focus:ring-[#116b36]/20 rounded-xl resize-none" 
                         required
                       />
                     </div>
                     <motion.div {...scaleOnHover}>
-                      <Button type="submit" className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                      <Button type="submit" className="w-full bg-[#116b36] hover:bg-[#116b36]/90 text-white text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                         Send Message
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
@@ -319,7 +319,7 @@ export default function ContactPage() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="w-20 h-20 rounded-full bg-[#084120] flex items-center justify-center mb-6 shadow-lg"
+              className="w-20 h-20 rounded-full bg-[#116b36] flex items-center justify-center mb-6 shadow-lg"
             >
               <CheckCircle className="w-10 h-10 text-white" />
             </motion.div>
@@ -346,7 +346,7 @@ export default function ContactPage() {
             >
               <Button
                 onClick={() => setShowSuccessModal(false)}
-                className="bg-[#084120] hover:bg-[#084120]/90 text-white px-8 py-3 rounded-xl"
+                className="bg-[#116b36] hover:bg-[#116b36]/90 text-white px-8 py-3 rounded-xl"
               >
                 Close
               </Button>

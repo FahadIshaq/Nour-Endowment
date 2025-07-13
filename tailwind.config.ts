@@ -62,7 +62,11 @@ const config: Config = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+  			primary: '#116b36', // Refined Green
+  			background: '#FAFAFA', // Soft Off-White
+  			muted: '#E3E8EB', // Cool Mist Gray
+  			graphite: '#2B2D2F', // Graphite
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

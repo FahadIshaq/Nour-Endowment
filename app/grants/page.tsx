@@ -57,7 +57,7 @@ export default function ProjectsPage() {
               Apply for a Grant
             </motion.h1>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-              <button className="mb-8 bg-[#084120] hover:bg-[#0a5a2c] text-white font-semibold py-3 px-8 rounded-xl text-lg shadow transition-all duration-300">
+              <button className="mb-8 bg-[#116b36] hover:bg-[#0a5a2c] text-white font-semibold py-3 px-8 rounded-xl text-lg shadow transition-all duration-300">
                 Grant Application
               </button>
             </a>
@@ -77,10 +77,10 @@ export default function ProjectsPage() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="flex items-center mb-6 gap-3">
-            <Award className="w-8 h-8 text-[#084120]" />
+            <Award className="w-8 h-8 text-[#116b36]" />
             <h2 className="text-4xl font-bold text-black">Eligibility Criteria</h2>
           </div>
-          <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#084120]">
+          <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#116b36]">
             <CardContent>
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
                 To be eligible for a Nour Endowment grant, applicants must meet the following criteria:
@@ -92,14 +92,14 @@ export default function ProjectsPage() {
                   "Reside in the United States, or possess documentation permitting them to live and study in the U.S. for the duration of their studies",
                   "Demonstrate a commitment to the values and mission of the Nour Endowment through past activities, volunteer work, or leadership roles."
                 ].map((item, idx) => (
-                  <Card key={idx} className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full w-full">
-                    <CheckCircle className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                  <Card key={idx} className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full w-full">
+                    <CheckCircle className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
                     <span className="text-lg text-slate-700 leading-relaxed">{item}</span>
                   </Card>
                 ))}
               </div>
               <p className="text-lg text-slate-700 leading-relaxed mt-4">
-                <span className="font-semibold text-[#084120]">Note:</span> While this is not an official requirement, preference will be given to students who demonstrate financial need, as determined by a standardized financial aid assessment or documentation of family circumstances.
+                <span className="font-semibold text-[#116b36]">Note:</span> While this is not an official requirement, preference will be given to students who demonstrate financial need, as determined by a standardized financial aid assessment or documentation of family circumstances.
               </p>
             </CardContent>
           </Card>
@@ -110,41 +110,41 @@ export default function ProjectsPage() {
       <section className="py-12 bg-[#f9f7f1]">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="flex items-center mb-6 gap-3">
-            <CheckCircle className="w-8 h-8 text-[#084120]" />
+            <CheckCircle className="w-8 h-8 text-[#116b36]" />
             <h2 className="text-4xl font-bold text-black">Selection Process</h2>
           </div>
-          <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#084120]">
+          <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#116b36]">
             <CardContent>
               <div className="space-y-6">
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  Applications are reviewed by a <span className="font-semibold text-[#084120]">Selection Committee</span>, which evaluates each application based on the published criteria including alignment with our mission, potential impact, and financial need.
+                  Applications are reviewed by a <span className="font-semibold text-[#116b36]">Selection Committee</span>, which evaluates each application based on the published criteria including alignment with our mission, potential impact, and financial need.
                 </p>
                 <div className="flex flex-col gap-6">
                   {/* Step 1 */}
-                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full">
-                    <FileText className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full">
+                    <FileText className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
                     <div>
-                      <span className="font-semibold text-[#084120]">Application Materials:</span>
+                      <span className="font-semibold text-[#116b36]">Application Materials:</span>
                       <p className="text-lg text-slate-700 leading-relaxed mt-1">
                         Along with the application form, applicants are required to submit their academic transcripts, recommendation letters from three references, standardized testing scores (if applicable), and university acceptance letter(s) (if applicable).
                       </p>
                     </div>
                   </Card>
                   {/* Step 2 */}
-                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full">
-                    <Users className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full">
+                    <Users className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
                     <div>
-                      <span className="font-semibold text-[#084120]">Committee Review:</span>
+                      <span className="font-semibold text-[#116b36]">Committee Review:</span>
                       <p className="text-lg text-slate-700 leading-relaxed mt-1">
                         The Selection Committee will make recommendations to the Board of Directors, which makes final funding decisions by majority vote.
                       </p>
                     </div>
                   </Card>
                   {/* Step 3 */}
-                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full">
-                    <Mail className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full">
+                    <Mail className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
                     <div>
-                      <span className="font-semibold text-[#084120]">Notification:</span>
+                      <span className="font-semibold text-[#116b36]">Notification:</span>
                       <p className="text-lg text-slate-700 leading-relaxed mt-1">
                         All applicants will be notified of final decisions via email.
                       </p>
@@ -201,10 +201,10 @@ export default function ProjectsPage() {
               
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#084120]/20 bg-white">
+                <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#116b36]/20 bg-white">
                   <CardHeader>
                     <motion.div
-                      className="w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center mb-4"
+                      className="w-16 h-16 rounded-2xl bg-[#116b36] flex items-center justify-center mb-4"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
@@ -242,7 +242,7 @@ export default function ProjectsPage() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="text-lg px-8 py-6 bg-white text-[#084120] hover:bg-slate-100"
+                  className="text-lg px-8 py-6 bg-white text-[#116b36] hover:bg-slate-100"
                 >
                   Support Now
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -301,10 +301,10 @@ export default function ProjectsPage() {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-start space-x-4 p-6 bg-[#f9f7f1] rounded-2xl border border-[#084120]/20"
+                    className="flex items-start space-x-4 p-6 bg-[#f9f7f1] rounded-2xl border border-[#116b36]/20"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#116b36] rounded-xl flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -339,7 +339,7 @@ export default function ProjectsPage() {
                         rel="noopener noreferrer"
                       >
                         <motion.div {...scaleOnHover}>
-                          <Button className="w-full bg-[#084120] hover:bg-[#084120]/90 text-white text-lg py-6">
+                          <Button className="w-full bg-[#116b36] hover:bg-[#116b36]/90 text-white text-lg py-6">
                             Apply for Funding
                             <ArrowRight className="ml-2 w-5 h-5" />
                           </Button>
@@ -363,7 +363,7 @@ export default function ProjectsPage() {
             <Link href="/contact">
               <Button
                 variant="outline"
-                className="border-[#084120] text-[#084120] hover:bg-[#084120]/10 bg-transparent"
+                className="border-[#116b36] text-[#116b36] hover:bg-[#116b36]/10 bg-transparent"
               >
                 Contact Us Here
               </Button>

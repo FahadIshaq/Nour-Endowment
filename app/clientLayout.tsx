@@ -88,7 +88,7 @@ export default function ClientLayout({
               <Link href="/">
                 <motion.div className="flex items-center space-x-3" whileHover={{ scale: 1.05 }}>
                   {/* <img src="/logo.png" alt="Nour Endowment" className="h-24 w-auto" /> */}
-                  <span className="text-3xl font-bold text-[#084120]">Nour Endowment</span>
+                  <span className="text-3xl font-bold text-[#116b36]">Nour Endowment</span>
                 </motion.div>
               </Link>
 
@@ -97,8 +97,8 @@ export default function ClientLayout({
                 {navigation.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <motion.span
-                      className={`text-slate-700 hover:text-[#084120] font-medium transition-colors ${
-                        pathname === item.href ? "text-[#084120] font-semibold" : ""
+                      className={`text-slate-700 hover:text-[#116b36] font-medium transition-colors ${
+                        pathname === item.href ? "text-[#116b36] font-semibold" : ""
                       }`}
                       whileHover={{ y: -2 }}
                     >
@@ -108,7 +108,7 @@ export default function ClientLayout({
                 ))}
                 <Link href="/donate">
                   <motion.div {...scaleOnHover}>
-                    <Button className="bg-[#084120] hover:bg-[#084120]/90 text-white">
+                    <Button className="bg-[#116b36] hover:bg-[#116b36]/90 text-white">
                       Contribute Now
                     </Button>
                   </motion.div>
@@ -135,15 +135,15 @@ export default function ClientLayout({
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`text-slate-700 hover:text-[#084120] font-medium ${
-                        pathname === item.href ? "text-[#084120] font-semibold" : ""
+                      className={`text-slate-700 hover:text-[#116b36] font-medium ${
+                        pathname === item.href ? "text-[#116b36] font-semibold" : ""
                       }`}
                     >
                       {item.name}
                     </Link>
                   ))}
                   <Link href="/donate" onClick={() => setIsMenuOpen(false)}>
-                    <Button className="bg-[#084120] hover:bg-[#084120]/90 text-white w-full">Contribute Now</Button>
+                    <Button className="bg-[#116b36] hover:bg-[#116b36]/90 text-white w-full">Contribute Now</Button>
                   </Link>
                 </div>
               </motion.div>
@@ -164,12 +164,12 @@ export default function ClientLayout({
                  
                 </div>
               </Link>
-              <p className="text-[#084120] leading-relaxed mx-auto mb-8 font-bold">
+              <p className="text-[#116b36] leading-relaxed mx-auto mb-8 font-bold">
               A Sustainable Endowment That Reinvests In Marginalized Communities Through Education
 
               </p>
               <div className="border-t border-slate-800 pt-8">
-                <p className="text-[#084120]">
+                <p className="text-[#116b36]">
                   © {new Date().getFullYear()} Nour Endowment. All rights reserved. | Tax ID: 99-3778982
                 </p>
               </div>

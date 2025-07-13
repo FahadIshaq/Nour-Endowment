@@ -118,7 +118,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                 <h3 className="text-3xl font-bold mb-6 text-black">How it Works</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-[#084120] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-[#116b36] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <TrendingUp className="w-4 h-4 text-white" />
                     </div>
                     <p className="text-lg text-slate-600">
@@ -127,7 +127,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                     </p>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-[#084120] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-[#116b36] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <Shield className="w-4 h-4 text-white" />
                     </div>
                     <p className="text-lg text-slate-600">
@@ -192,7 +192,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
               <motion.div key={index} variants={fadeInUp} className={`relative flex justify-center items-stretch ${index === 0 ? 'mt-0 md:mt-0' : 'mt-8 md:mt-0'}`}>
                 {/* Floating Icon */}
                 <motion.div
-                  className="absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-3xl shadow-lg bg-[#084120] flex items-center justify-center border-4 border-white/70"
+                  className="absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-3xl shadow-lg bg-[#116b36] flex items-center justify-center border-4 border-white/70"
                   whileHover={{ scale: 1.08, rotate: 8 }}
                   transition={{ duration: 0.4 }}
                   style={{ boxShadow: '0 8px 32px 0 rgba(91, 106, 63, 0.15)' }}
@@ -200,7 +200,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                   <value.icon className="w-10 h-10 text-white" />
                 </motion.div>
                 {/* Card */}
-                <Card className="h-full pt-16 pb-8 px-6 bg-white border border-[#084120]/20 border-t-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.025] hover:shadow-2xl"> 
+                <Card className="h-full pt-16 pb-8 px-6 bg-white border border-[#116b36]/20 border-t-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.025] hover:shadow-2xl"> 
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl font-bold mb-2 text-black text-center">{value.title}</CardTitle>
                   </CardHeader>
@@ -236,10 +236,10 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                       className="flex items-center space-x-4 p-4 rounded-xl bg-white/60 hover:bg-white/80 transition group shadow"
                       whileHover={{ x: 6 }}
                     >
-                      <span className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#084120] shadow-md mr-2">
+                      <span className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#116b36] shadow-md mr-2">
                         <CheckCircle className="w-6 h-6 text-white" />
                       </span>
-                      <span className="text-lg text-slate-700 font-semibold group-hover:text-[#084120] transition">{principle.name}</span>
+                      <span className="text-lg text-slate-700 font-semibold group-hover:text-[#116b36] transition">{principle.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -268,7 +268,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="text-lg px-8 py-6 bg-white text-[#084120] hover:bg-slate-100"
+                  className="text-lg px-8 py-6 bg-white text-[#116b36] hover:bg-slate-100"
                 >
                   Get Involved Today
                   <ArrowRight className="ml-2 w-5 h-5" />

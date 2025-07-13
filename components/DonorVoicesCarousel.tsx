@@ -21,7 +21,7 @@ const testimonials = [
   {
     quote: "By donating, I'm investing in the potential of individuals who can change the world. There's no better way to make an impact",
     name: "Kareem T.",
-    bg: "bg-[#084120]",
+    bg: "bg-[#116b36]",
     text: "text-white",
   },
   {
@@ -51,7 +51,7 @@ const testimonials = [
   {
     quote: "Investing in someone's education is a charity that lives beyond just that individual",
     name: "Abdallah M.",
-    bg: "bg-[#084120]",
+    bg: "bg-[#116b36]",
     text: "text-white",
   },
   // --- ADDITIONAL 16 QUOTES ---

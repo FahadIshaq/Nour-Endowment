@@ -74,11 +74,11 @@ export default function TeamPage() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <motion.h3 variants={fadeInUp} className="text-4xl font-extrabold text-center mb-4 text-[#084120] drop-shadow-lg tracking-wide">
+            <motion.h3 variants={fadeInUp} className="text-4xl font-extrabold text-center mb-4 text-[#116b36] drop-shadow-lg tracking-wide">
               Board
             </motion.h3>
             <div className="flex justify-center mb-12">
-              <div className="w-24 h-1 rounded-full bg-[#084120]" />
+              <div className="w-24 h-1 rounded-full bg-[#116b36]" />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
@@ -99,18 +99,18 @@ export default function TeamPage() {
               ].map((member, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
                   <Dialog open={openIndex === index} onOpenChange={open => setOpenIndex(open ? index : null)}>
-                    <Card className="w-full max-w-xs flex flex-col items-center justify-between bg-white rounded-3xl border border-[#084120]/20 shadow-xl hover:shadow-[#084120]/20 hover:-translate-y-2 hover:scale-[1.025] transition-all duration-300 p-6 group">
+                    <Card className="w-full max-w-xs flex flex-col items-center justify-between bg-white rounded-3xl border border-[#116b36]/20 shadow-xl hover:shadow-[#116b36]/20 hover:-translate-y-2 hover:scale-[1.025] transition-all duration-300 p-6 group">
                       <CardHeader className="w-full flex flex-col items-center">
                         {/* Decorative accent */}
-                        <div className="w-8 h-1 rounded-full bg-[#084120] mb-4 group-hover:bg-[#084120]/80 transition" />
-                        <div className="w-36 h-36 rounded-full overflow-hidden flex items-center justify-center mb-4 border-4 border-[#084120]/20 shadow-md bg-white">
+                        <div className="w-8 h-1 rounded-full bg-[#116b36] mb-4 group-hover:bg-[#116b36]/80 transition" />
+                        <div className="w-36 h-36 rounded-full overflow-hidden flex items-center justify-center mb-4 border-4 border-[#116b36]/20 shadow-md bg-white">
                           <img
                             src={member.image}
                             alt={member.name}
                             className={`w-full h-full object-cover ${member.name === "Sara Taleb-Agha" ? '[object-position:center_20%]' : 'object-top'}`}
                           />
                         </div>
-                        <CardTitle className="text-2xl font-extrabold text-center text-[#084120] tracking-wide drop-shadow-sm">
+                        <CardTitle className="text-2xl font-extrabold text-center text-[#116b36] tracking-wide drop-shadow-sm">
                           {member.name}
                         </CardTitle>
                         <div className="flex items-center gap-2 mb-2 mt-1">
@@ -120,7 +120,7 @@ export default function TeamPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`LinkedIn profile of ${member.name}`}
-                            className="ml-1 text-[#084120] hover:text-[#084120]/80 transition"
+                            className="ml-1 text-[#116b36] hover:text-[#116b36]/80 transition"
                           >
                             <Linkedin className="w-5 h-5" />
                           </a>
@@ -128,7 +128,7 @@ export default function TeamPage() {
                       </CardHeader>
                       <motion.div {...scaleOnHover} className="mt-4 w-full flex justify-center">
                         <DialogTrigger asChild>
-                          <Button variant="outline" size="sm" className="w-full max-w-[140px] group-hover:border-[#084120] group-hover:text-[#084120]">
+                          <Button variant="outline" size="sm" className="w-full max-w-[140px] group-hover:border-[#116b36] group-hover:text-[#116b36]">
                             Learn More
                           </Button>
                         </DialogTrigger>
@@ -147,7 +147,7 @@ export default function TeamPage() {
                         </div>
                         <div className="flex-1 min-w-0 w-full">
                           <DialogHeader>
-                            <DialogTitle className="text-2xl md:text-3xl font-extrabold text-[#084120] mb-2">
+                            <DialogTitle className="text-2xl md:text-3xl font-extrabold text-[#116b36] mb-2">
                               {member.name}
                             </DialogTitle>
                             <DialogDescription className="text-base md:text-lg text-slate-700 mb-2 font-semibold">
@@ -160,7 +160,7 @@ export default function TeamPage() {
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label={`LinkedIn profile of ${member.name}`}
-                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#084120]/20 text-[#084120] hover:bg-[#084120] hover:text-white transition-all duration-300 hover:shadow-md"
+                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#116b36]/20 text-[#116b36] hover:bg-[#116b36] hover:text-white transition-all duration-300 hover:shadow-md"
                             >
                               <Linkedin className="w-4 h-4" />
                               <span className="text-sm font-semibold tracking-wide">LinkedIn</span>
@@ -184,11 +184,11 @@ export default function TeamPage() {
       <section className="py-20 bg-[#f9f7f1]">
         <div className="container mx-auto px-4">
           <motion.div variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true }}>
-            <motion.h3 variants={fadeInUp} className="text-4xl font-extrabold text-center mb-4 text-[#084120] drop-shadow-lg tracking-wide">
+            <motion.h3 variants={fadeInUp} className="text-4xl font-extrabold text-center mb-4 text-[#116b36] drop-shadow-lg tracking-wide">
               Advisory Board
             </motion.h3>
             <div className="flex justify-center mb-12">
-              <div className="w-24 h-1 rounded-full bg-[#084120]" />
+              <div className="w-24 h-1 rounded-full bg-[#116b36]" />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:gap-0 gap-8 mx-auto">
               {[
@@ -217,18 +217,18 @@ export default function TeamPage() {
               ].map((member, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
                   <Dialog open={openAdvIndex === index} onOpenChange={open => setOpenAdvIndex(open ? index : null)}>
-                    <Card className="w-full max-w-xs flex flex-col items-center justify-between bg-white rounded-3xl border border-[#084120]/20 shadow-xl hover:shadow-[#084120]/20 hover:-translate-y-2 hover:scale-[1.025] transition-all duration-300 p-6 group">
+                    <Card className="w-full max-w-xs flex flex-col items-center justify-between bg-white rounded-3xl border border-[#116b36]/20 shadow-xl hover:shadow-[#116b36]/20 hover:-translate-y-2 hover:scale-[1.025] transition-all duration-300 p-6 group">
                       <CardHeader className="w-full flex flex-col items-center">
                         {/* Decorative accent */}
-                        <div className="w-8 h-1 rounded-full bg-[#084120] mb-4 group-hover:bg-[#084120]/80 transition" />
-                        <div className="w-36 h-36 rounded-full overflow-hidden flex items-center justify-center mb-4 border-4 border-[#084120]/20 shadow-md bg-white">
+                        <div className="w-8 h-1 rounded-full bg-[#116b36] mb-4 group-hover:bg-[#116b36]/80 transition" />
+                        <div className="w-36 h-36 rounded-full overflow-hidden flex items-center justify-center mb-4 border-4 border-[#116b36]/20 shadow-md bg-white">
                           <img
                             src={member.image}
                             alt={member.name}
                             className="w-full h-full object-cover object-top"
                           />
                         </div>
-                        <CardTitle className="text-2xl font-extrabold text-center text-[#084120] tracking-wide drop-shadow-sm">
+                        <CardTitle className="text-2xl font-extrabold text-center text-[#116b36] tracking-wide drop-shadow-sm">
                           {member.name}
                         </CardTitle>
                         <div className="flex items-center gap-2 mb-2 mt-1">
@@ -259,7 +259,7 @@ export default function TeamPage() {
                       </CardHeader>
                       <motion.div {...scaleOnHover} className="mt-4 w-full flex justify-center">
                         <DialogTrigger asChild>
-                          <Button variant="outline" size="sm" className="w-full max-w-[140px] group-hover:border-[#084120] group-hover:text-[#084120]">
+                          <Button variant="outline" size="sm" className="w-full max-w-[140px] group-hover:border-[#116b36] group-hover:text-[#116b36]">
                             Learn More
                           </Button>
                         </DialogTrigger>
@@ -280,7 +280,7 @@ export default function TeamPage() {
                         </div>
                         <div className="flex-1 min-w-0 w-full">
                           <DialogHeader>
-                            <DialogTitle className="text-2xl md:text-3xl font-extrabold text-[#084120] mb-2">
+                            <DialogTitle className="text-2xl md:text-3xl font-extrabold text-[#116b36] mb-2">
                               {member.name}
                             </DialogTitle>
                             <DialogDescription className="text-base md:text-lg text-slate-700 mb-2 font-semibold">
@@ -294,7 +294,7 @@ export default function TeamPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={`LinkedIn profile of ${member.name}`}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#084120]/20 text-[#084120] hover:bg-[#084120] hover:text-white transition-all duration-300 hover:shadow-md"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#116b36]/20 text-[#116b36] hover:bg-[#116b36] hover:text-white transition-all duration-300 hover:shadow-md"
                               >
                                 <Linkedin className="w-4 h-4" />
                                 <span className="text-sm font-semibold tracking-wide">LinkedIn</span>
@@ -306,7 +306,7 @@ export default function TeamPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={`Facebook profile of ${member.name}`}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#084120]/20 text-[#084120] hover:bg-[#084120] hover:text-white transition-all duration-300 hover:shadow-md"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#116b36]/20 text-[#116b36] hover:bg-[#116b36] hover:text-white transition-all duration-300 hover:shadow-md"
                               >
                                 <Facebook className="w-4 h-4" />
                                 <span className="text-sm font-semibold tracking-wide">Facebook</span>

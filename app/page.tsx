@@ -46,7 +46,7 @@ export default function HomePage() {
               className="space-y-8"
             >
               <motion.div
-                className="inline-block px-4 py-2 bg-[#084120] text-white rounded-full text-sm font-medium"
+                className="inline-block px-4 py-2 bg-[#116b36] text-white rounded-full text-sm font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -83,7 +83,7 @@ export default function HomePage() {
                   <motion.div {...scaleOnHover}>
                     <Button
                       size="lg"
-                      className="bg-[#084120] hover:bg-[#084120]/90 text-white text-lg px-8 py-6"
+                      className="bg-[#116b36] hover:bg-[#116b36]/90 text-white text-lg px-8 py-6"
                     >
                       Start Contributing
                       <ArrowRight className="ml-2 w-5 h-5" />
@@ -119,7 +119,7 @@ export default function HomePage() {
                   transition={{ duration: 0.3 }}
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-full h-full bg-[#084120]/20 rounded-2xl -z-10"></div>
+              <div className="absolute -top-4 -right-4 w-full h-full bg-[#116b36]/20 rounded-2xl -z-10"></div>
             </motion.div>
           </div>
         </div>
@@ -157,14 +157,14 @@ export default function HomePage() {
               },
             ].map((stat, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
-                <Card className="flex flex-col items-center text-center rounded-2xl bg-white border border-[#084120]/20 shadow-lg hover:shadow-[#084120]/20 transition-all duration-300 w-full max-w-[320px] p-4 sm:p-6 relative overflow-hidden group">
+                <Card className="flex flex-col items-center text-center rounded-2xl bg-white border border-[#116b36]/20 shadow-lg hover:shadow-[#116b36]/20 transition-all duration-300 w-full max-w-[320px] p-4 sm:p-6 relative overflow-hidden group">
                   {/* Accent bar */}
-                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl bg-[#084120] opacity-70 group-hover:opacity-100 transition-all duration-300" />
+                  <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-2xl bg-[#116b36] opacity-70 group-hover:opacity-100 transition-all duration-300" />
                   {/* Icon */}
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#084120] mb-3 mt-3 shadow ring-2 ring-white/60">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#116b36] mb-3 mt-3 shadow ring-2 ring-white/60">
                     <stat.icon className="w-6 h-6 text-white drop-shadow" />
                   </div>
-                  <div className="text-3xl font-extrabold mb-1 text-[#084120] tracking-wide">{stat.number}</div>
+                  <div className="text-3xl font-extrabold mb-1 text-[#116b36] tracking-wide">{stat.number}</div>
                   <div className="text-base font-semibold text-black mb-1 tracking-wider">{stat.label}</div>
                   <div className="text-slate-500 text-sm">{stat.description}</div>
                 </Card>
@@ -189,7 +189,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-6xl lg:text-7xl font-extrabold mb-4 text-[#084120] tracking-tight"
+              className="text-6xl lg:text-7xl font-extrabold mb-4 text-[#116b36] tracking-tight"
             >
               50+
             </motion.div>
@@ -245,26 +245,26 @@ export default function HomePage() {
                 number: "1,000",
                 title: "Founding Members",
                 description: "giving $1,000 a year",
-                color: "bg-[#084120]",
-                textColor: "text-[#084120]"
+                color: "bg-[#116b36]",
+                textColor: "text-[#116b36]"
               },
               {
                 number: "100",
                 title: "Impact Partners",
                 description: "giving $10,000+",
-                color: "bg-[#084120]/80",
-                textColor: "text-[#084120]"
+                color: "bg-[#116b36]/80",
+                textColor: "text-[#116b36]"
               },
               {
                 number: "10",
                 title: "Legacy Builders",
                 description: "giving $50,000+",
-                color: "bg-[#084120]/60",
-                textColor: "text-[#084120]"
+                color: "bg-[#116b36]/60",
+                textColor: "text-[#116b36]"
               }
             ].map((tier, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
-                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#084120]/20 shadow-xl hover:shadow-[#084120]/20 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 w-full p-8 group overflow-hidden">
+                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#116b36]/20 shadow-xl hover:shadow-[#116b36]/20 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 w-full p-8 group overflow-hidden">
                   {/* Decorative accent */}
                   <div className={`absolute top-0 left-0 w-full h-2 rounded-t-3xl ${tier.color} opacity-70 group-hover:opacity-100 transition-all duration-300`} />
                   
@@ -338,14 +338,14 @@ export default function HomePage() {
               },
             ].map((step, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
-                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#084120]/20 shadow-xl hover:shadow-[#084120]/20 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs p-8 group overflow-hidden">
+                <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#116b36]/20 shadow-xl hover:shadow-[#116b36]/20 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs p-8 group overflow-hidden">
                   {/* Floating Icon with Glow */}
-                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-[#084120] opacity-80 blur-md" />
-                  <div className="relative z-20 w-16 h-16 rounded-2xl bg-[#084120] flex items-center justify-center mb-4 mx-auto shadow-lg">
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-[#116b36] opacity-80 blur-md" />
+                  <div className="relative z-20 w-16 h-16 rounded-2xl bg-[#116b36] flex items-center justify-center mb-4 mx-auto shadow-lg">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
                   {/* Step Number */}
-                  <div className="text-5xl font-extrabold text-[#084120] mb-2 drop-shadow-lg">{step.step}</div>
+                  <div className="text-5xl font-extrabold text-[#116b36] mb-2 drop-shadow-lg">{step.step}</div>
                   <div className="text-xl font-bold mb-2 text-black">{step.title}</div>
                   <div className="text-slate-600 leading-relaxed text-center">{step.description}</div>
                 </Card>
@@ -406,7 +406,7 @@ export default function HomePage() {
                 },
               ].map((feature, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#084120] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#116b36] rounded-xl flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -458,7 +458,7 @@ export default function HomePage() {
                 <motion.div {...scaleOnHover}>
                   <Button
                     size="lg"
-                    className="bg-[#084120] hover:bg-[#084120]/90 text-white text-lg px-8 py-6"
+                    className="bg-[#116b36] hover:bg-[#116b36]/90 text-white text-lg px-8 py-6"
                   >
                     Support Now
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -481,7 +481,7 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <motion.div variants={fadeInUp} className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-[#084120] rounded-2xl flex items-center justify-center">
+              <div className="w-16 h-16 bg-[#116b36] rounded-2xl flex items-center justify-center">
                 <HelpCircle className="w-8 h-8 text-white" />
               </div>
             </motion.div>
@@ -516,8 +516,8 @@ export default function HomePage() {
                 }
               ].map((faq, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <AccordionItem value={`item-${index}`} className="border border-[#084120]/20 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
-                    <AccordionTrigger className="px-6 py-4 text-left font-semibold text-black hover:text-[#084120] hover:no-underline">
+                  <AccordionItem value={`item-${index}`} className="border border-[#116b36]/20 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
+                    <AccordionTrigger className="px-6 py-4 text-left font-semibold text-black hover:text-[#116b36] hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4 text-slate-600 leading-relaxed">
@@ -552,7 +552,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="secondary"
-                    className="text-lg px-8 py-6 bg-white text-[#084120] hover:bg-slate-100"
+                    className="text-lg px-8 py-6 bg-white text-[#116b36] hover:bg-slate-100"
                   >
                     Start Contributing
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -564,7 +564,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-[#084120] bg-transparent"
+                    className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-[#116b36] bg-transparent"
                   >
                     See Our Projects
                   </Button>
