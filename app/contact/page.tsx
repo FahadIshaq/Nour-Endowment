@@ -183,7 +183,7 @@ export default function ContactPage() {
                   Let's Start a Conversation
                 </h2>
                 <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                  Whether you have general inquiries about the Nour Endowment, want to explore partnership opportunities, or have scholarship application questions, we’re here to help.
+                  Whether you have general inquiries about the Nour Endowment, want to explore partnership opportunities, or have grant application questions, we’re here to help.
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">

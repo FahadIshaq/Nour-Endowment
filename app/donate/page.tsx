@@ -98,7 +98,7 @@ export default function DonatePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Make your mark - contribute today and become a Founding Member shaping the future.
+              Make your mark — contribute today and become a Founding Member shaping the future.
             </motion.p>
           </div>
         </div>

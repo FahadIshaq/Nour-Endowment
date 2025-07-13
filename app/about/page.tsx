@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Award, Globe, Heart, CheckCircle, TrendingUp, Shield, ArrowRight } from "lucide-react"
+import { Award, Globe, Heart, CheckCircle, TrendingUp, Shield, ArrowRight, Lightbulb } from "lucide-react"
 import Link from "next/link"
 
 const fadeInUp = {
@@ -175,29 +175,21 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl w-full mx-auto"
           >
             {[
-              {
-                icon: Award,
-                title: "Our Mission",
-                description:
-                  "To provide sustainable educational opportunities and community development programs that empower individuals and strengthen communities for generations to come.",
-              },
-              {
-                icon: Globe,
-                title: "Our Vision",
-                description:
-                  "A world where every individual has access to quality education and the resources needed to reach their full potential, regardless of their background or circumstances.",
-              },
-              {
-                icon: Heart,
-                title: "Our Values",
-                description:
-                  "Excellence, Integrity, Innovation, and Compassion guide everything we do as we work to create lasting positive change in communities worldwide.",
-              },
+              // {
+              //   icon: Globe,
+              //   title: "Our Vision",
+              //   description:
+              //     "A world where every individual has access to quality education and the resources needed to reach their full potential, regardless of their background or circumstances.",
+              // },
+              { icon: CheckCircle, title: "Excellence", description: "We strive for the highest standards in everything we do, from our programs to our partnerships." },
+              { icon: Shield, title: "Integrity", description: "We act with honesty, transparency, and accountability in all our actions." },
+              { icon: Lightbulb, title: "Innovation", description: "We embrace new ideas and creative solutions to drive lasting impact." },
+              { icon: Heart, title: "Compassion", description: "We are committed to empathy, kindness, and service to others." },
             ].map((value, index) => (
-              <motion.div key={index} variants={fadeInUp} className="relative flex justify-center items-stretch">
+              <motion.div key={index} variants={fadeInUp} className={`relative flex justify-center items-stretch ${index === 0 ? 'mt-0 md:mt-0' : 'mt-8 md:mt-0'}`}>
                 {/* Floating Icon */}
                 <motion.div
                   className="absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-3xl shadow-lg bg-[#084120] flex items-center justify-center border-4 border-white/70"
@@ -210,10 +202,10 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                 {/* Card */}
                 <Card className="h-full pt-16 pb-8 px-6 bg-white border border-[#084120]/20 border-t-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.025] hover:shadow-2xl"> 
                   <CardHeader className="text-center">
-                    <CardTitle className="text-2xl font-bold mb-2 text-black">{value.title}</CardTitle>
+                    <CardTitle className="text-2xl font-bold mb-2 text-black text-center">{value.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-slate-600 leading-relaxed text-base">{value.description}</CardDescription>
+                  <CardContent className="text-center">
+                    <CardDescription className="text-slate-600 leading-relaxed text-base text-center">{value.description}</CardDescription>
                   </CardContent>
                 </Card>
               </motion.div>

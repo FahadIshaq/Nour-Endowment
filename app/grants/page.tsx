@@ -16,6 +16,9 @@ import {
   Globe,
   Target,
   Lightbulb,
+  CheckCircle,
+  FileText,
+  Mail,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -41,101 +44,116 @@ const scaleOnHover = {
 export default function ProjectsPage() {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="pb-16 px-4">
+      {/* Cream Hero Section with Application Button and Intro */}
+      <section className="pb-16 px-4 bg-[#f9f7f1]">
         <div className="container mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              className="inline-block px-4 py-2 bg-[#084120] text-white rounded-full text-sm font-medium mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-            >
-              Nour Endowment 2025
-            </motion.div>
-
             <motion.h1
               className="text-5xl lg:text-6xl font-bold leading-tight mb-8 text-black"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Grants
+              Apply for a Grant
             </motion.h1>
-
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+              <button className="mb-8 bg-[#084120] hover:bg-[#0a5a2c] text-white font-semibold py-3 px-8 rounded-xl text-lg shadow transition-all duration-300">
+                Grant Application
+              </button>
+            </a>
             <motion.p
-              className="text-2xl text-slate-600 leading-relaxed mb-12"
+              className="text-xl text-slate-600 leading-relaxed mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              At Nour Endowment, we are dedicated to increasing access to education, empowering our communities, and unlocking pathways to opportunity to create a sustainable cycle of self-reliance.
+              At Nour Endowment we are dedicated to increasing access to education, empowering our communities, and unlocking pathways to opportunity to create a sustainable cycle of self-reliance. If you are a student from a marginalized community who shares our vision and is aligned with our mission, we encourage you to apply for a grant.
             </motion.p>
           </div>
         </div>
       </section>
 
-      {/* What We Fund Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
-              Apply for a Grant
-            </motion.h2>
-            <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-4">
-              If you are a student who identifies as someone from a marginalized community and is aligned with our mission, we encourage you to apply for a grant.
-              <br />
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                <button className="mt-4 bg-[#084120] hover:bg-[#0a5a2c] text-white font-semibold py-3 px-8 rounded-xl text-lg shadow transition-all duration-300">
-                  Grant Application
-                </button>
-              </a>
-            </motion.p>
-            <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              At Nour Endowment, we are dedicated to investing in individuals, organizations, and initiatives that
-              expand access to education, foster professional growth, and strengthen pathways to opportunity. Our goal
-              is to create lasting, transformative impact where systemic barriers have limited opportunities the most.
-              Explore below to learn more about the types of transformative projects we aspire to support.
-            </motion.p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-16 md:gap-0 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <img
-                src="/new.jpg"
-                alt="What We Fund"
-                className="rounded-2xl shadow-xl max-h-[500px] w-auto max-w-full object-contain mx-auto bg-white"
-              />
-            </motion.div>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <motion.div variants={fadeInUp}>
-                <h3 className="text-3xl font-bold mb-6 text-black">Our Vision for Investments</h3>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                  We are inspired by initiatives that expand access to education, nurture professional growth, and
-                  create pathways to opportunity for individuals facing systemic barriers. As we build a sustainable
-                  endowment, we envision supporting efforts that:
-                </p>
-              </motion.div>
-            </motion.div>
+      {/* Eligibility Criteria Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="flex items-center mb-6 gap-3">
+            <Award className="w-8 h-8 text-[#084120]" />
+            <h2 className="text-4xl font-bold text-black">Eligibility Criteria</h2>
           </div>
+          <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#084120]">
+            <CardContent>
+              <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                To be eligible for a Nour Endowment grant, applicants must meet the following criteria:
+              </p>
+              <div className="flex flex-col gap-6 mb-6">
+                {[
+                  "Identify as a member of a marginalized community",
+                  "Be either a high school student applying to, or already accepted at, an American university, or a current college student enrolled at an American university",
+                  "Reside in the United States, or possess documentation permitting them to live and study in the U.S. for the duration of their studies",
+                  "Demonstrate a commitment to the values and mission of the Nour Endowment through past activities, volunteer work, or leadership roles."
+                ].map((item, idx) => (
+                  <Card key={idx} className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full w-full">
+                    <CheckCircle className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                    <span className="text-lg text-slate-700 leading-relaxed">{item}</span>
+                  </Card>
+                ))}
+              </div>
+              <p className="text-lg text-slate-700 leading-relaxed mt-4">
+                <span className="font-semibold text-[#084120]">Note:</span> While this is not an official requirement, preference will be given to students who demonstrate financial need, as determined by a standardized financial aid assessment or documentation of family circumstances.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Selection Process Section */}
+      <section className="py-12 bg-[#f9f7f1]">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="flex items-center mb-6 gap-3">
+            <CheckCircle className="w-8 h-8 text-[#084120]" />
+            <h2 className="text-4xl font-bold text-black">Selection Process</h2>
+          </div>
+          <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#084120]">
+            <CardContent>
+              <div className="space-y-6">
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Applications are reviewed by a <span className="font-semibold text-[#084120]">Selection Committee</span>, which evaluates each application based on the published criteria including alignment with our mission, potential impact, and financial need.
+                </p>
+                <div className="flex flex-col gap-6">
+                  {/* Step 1 */}
+                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full">
+                    <FileText className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="font-semibold text-[#084120]">Application Materials:</span>
+                      <p className="text-lg text-slate-700 leading-relaxed mt-1">
+                        Along with the application form, applicants are required to submit their academic transcripts, recommendation letters from three references, standardized testing scores (if applicable), and university acceptance letter(s) (if applicable).
+                      </p>
+                    </div>
+                  </Card>
+                  {/* Step 2 */}
+                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full">
+                    <Users className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="font-semibold text-[#084120]">Committee Review:</span>
+                      <p className="text-lg text-slate-700 leading-relaxed mt-1">
+                        The Selection Committee will make recommendations to the Board of Directors, which makes final funding decisions by majority vote.
+                      </p>
+                    </div>
+                  </Card>
+                  {/* Step 3 */}
+                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#084120]/20 rounded-2xl shadow-md h-full">
+                    <Mail className="w-6 h-6 text-[#084120] mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="font-semibold text-[#084120]">Notification:</span>
+                      <p className="text-lg text-slate-700 leading-relaxed mt-1">
+                        All applicants will be notified of final decisions via email.
+                      </p>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
