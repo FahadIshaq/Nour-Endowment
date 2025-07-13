@@ -175,7 +175,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl w-full mx-auto"
+            className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto"
           >
             {[
               // {
