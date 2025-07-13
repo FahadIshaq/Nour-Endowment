@@ -120,7 +120,7 @@ export default function TeamPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`LinkedIn profile of ${member.name}`}
-                            className="ml-1 text-[#116b36] hover:text-[#116b36]/80 transition"
+                            className="ml-1 text-blue-600 hover:text-[#116b36]/80 transition"
                           >
                             <Linkedin className="w-5 h-5" />
                           </a>
