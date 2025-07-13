@@ -124,42 +124,70 @@ export default function DonatePage() {
                   {/* Tiers List */}
                   <div className="space-y-6 mb-8">
                     {[
-                      { tier: "Founding Member", amount: "$1,000/year" },
-                      { tier: "Impact Partner", amount: "$10,000+" },
-                      { tier: "Legacy Builder", amount: "$50,000+" },
-                    ].map((tier, index) => (
+                      "Founding Member",
+                      "Impact Partner",
+                      "Legacy Builder"
+                    ].map((tier, idx) => (
                       <motion.div
-                        key={index}
+                        key={idx}
                         className="p-6 rounded-2xl bg-[#084120] text-white cursor-pointer"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
                         <div className="flex items-center justify-between">
                           <div>
-                            <h4 className="font-bold text-lg">{tier.tier}</h4>
-                            <p className="text-white/90">{tier.amount}</p>
+                            <h4 className="font-bold text-lg">{tier}</h4>
+                            <p className="text-white/90">{["$1,000/year", "$10,000+", "$50,000+"][idx]}</p>
                           </div>
                           <ArrowRight className="w-6 h-6" />
                         </div>
                       </motion.div>
                     ))}
                   </div>
-                  {/* Tax and Transparency */}
-                  <div className="mt-8 p-6 bg-slate-50 rounded-2xl">
-                    <h4 className="font-bold text-slate-800 mb-4">Tax and Transparency</h4>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                      We'll share quarterly updates on how the fund is growing and what your support is making possible.
-                    </p>
-                    <p className="text-sm text-slate-600 leading-relaxed">
-                      All donations to Nour Endowment are tax-deductible and processed through our fiscal sponsor, Wasla Connect Tax ID: 99-3778982. Your bank statement will show "Nour Endowment," and 100% of your gift supports our work. We're currently awaiting our own 501(c)(3) status. No goods or services were provided in exchange for your donation. If you have any questions, feel free to contact us.
-                    </p>
+                  {/* Responsive order for widget and Tax and Transparency */}
+                  <div className="flex flex-col">
+                    {/* Givebutter Widget: only on mobile (below md) */}
+                    <div className="block md:hidden w-full max-w-lg mx-auto my-8">
+                      {!scriptLoaded && !widgetError && (
+                        <div className="flex items-center justify-center p-8 bg-slate-50 rounded-lg w-full">
+                          <div className="text-center">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#084120] mx-auto mb-2"></div>
+                            <p className="text-slate-600">Loading donation form...</p>
+                          </div>
+                        </div>
+                      )}
+                      {widgetError && (
+                        <div className="p-6 bg-red-50 border border-red-200 rounded-lg text-center w-full">
+                          <p className="text-red-600 mb-2">Unable to load donation form</p>
+                          <p className="text-sm text-red-500">Please refresh the page or try again later.</p>
+                        </div>
+                      )}
+                      {scriptLoaded && !widgetError && (
+                        <div
+                          className="w-full min-h-[400px]"
+                          dangerouslySetInnerHTML={{
+                            __html: '<givebutter-widget id="jw83eL" account="f8kaScYwTtpnbut7"></givebutter-widget>'
+                          }}
+                        />
+                      )}
+                    </div>
+                    {/* Tax and Transparency: order-2 on mobile, order-1 on md+ */}
+                    <div className="order-2 md:order-1 mt-8 p-6 bg-slate-50 rounded-2xl">
+                      <h4 className="font-bold text-slate-800 mb-4">Tax and Transparency</h4>
+                      <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                        We'll share quarterly updates on how the fund is growing and what your support is making possible.
+                      </p>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        All donations to Nour Endowment are tax-deductible and processed through our fiscal sponsor, Wasla Connect Tax ID: 99-3778982. Your bank statement will show "Nour Endowment," and 100% of your gift supports our work. We're currently awaiting our own 501(c)(3) status. No goods or services were provided in exchange for your donation. If you have any questions, feel free to contact us.
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Right: Widget only */}
-            <div className="flex justify-center items-start w-full">
+            {/* Right: Widget only (desktop/tablet) */}
+            <div className="hidden md:flex justify-center items-start w-full">
               <div className="w-full max-w-lg">
                 {/* Donation Widget */}
                 {!scriptLoaded && !widgetError && (
