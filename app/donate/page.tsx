@@ -227,7 +227,7 @@ export default function DonatePage() {
                 icon: Shield,
                 title: "How Gifts are Managed?",
                 content:
-                  "All donations are professionally invested by a certified outsourced Chief Investment Officer (OCIO). This ensures long-term growth, transparency, and stewardship of every dollar.",
+                  "All donations are professionally invested. This ensures long-term growth, transparency, and stewardship of every dollar.",
               },
               {
                 icon: CheckCircle,

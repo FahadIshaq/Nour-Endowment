@@ -437,7 +437,7 @@ export default function HomePage() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-4xl lg:text-5xl font-bold mb-8 text-black"
             >
-              Your gift isn't spent - it's planted.
+              Your gift isn't spent — it's planted.
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
