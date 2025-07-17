@@ -196,7 +196,7 @@ export default function InvestmentCalculator() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-primary">
+                    <div className="text-xl sm:text-2xl font-bold text-black">
                       {finalYear?.totalValue.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
