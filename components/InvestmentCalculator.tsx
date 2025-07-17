@@ -50,7 +50,7 @@ export default function InvestmentCalculator() {
   const chartConfig = {
     principal: {
       label: "Principal",
-      color: "#1f2937", // Dark blue-gray
+      color: "black", // Dark blue-gray
     },
     returns: {
       label: "Returns",
@@ -58,7 +58,7 @@ export default function InvestmentCalculator() {
     },
     scholarshipAmount: {
       label: "Scholarship Fund",
-      color: "#f59e0b", // Vibrant amber/gold
+      color: "#116b36", // Vibrant amber/gold
     },
   };
 
@@ -69,7 +69,7 @@ export default function InvestmentCalculator() {
           <p className="font-semibold mb-2 text-sm sm:text-base">{`Year ${label}`}</p>
           <div className="space-y-1">
             <p className="text-xs sm:text-sm">
-              <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#1f2937' }}></span>
+              <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: 'black' }}></span>
               Principal: {payload[0].payload.principal.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm">
@@ -77,7 +77,7 @@ export default function InvestmentCalculator() {
               Returns: {payload[0].payload.returns.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm">
-              <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#f59e0b' }}></span>
+              <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#116b36' }}></span>
               Total Used for Education: {payload[0].payload.scholarshipAmount.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm font-semibold border-t pt-1 mt-2">
@@ -180,7 +180,7 @@ export default function InvestmentCalculator() {
               <CardContent>
                 <div className="space-y-4 sm:space-y-6">
                   <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold" style={{ color: '#f59e0b' }}>
+                    <div className="text-2xl sm:text-3xl font-bold" style={{ color: '#116b36' }}>
                       {totalScholarships.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
@@ -288,7 +288,7 @@ export default function InvestmentCalculator() {
                 {/* Legend */}
                 <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 mt-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ backgroundColor: '#1f2937' }}></div>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ backgroundColor: 'black' }}></div>
                     <span>Principal Investment</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -296,7 +296,7 @@ export default function InvestmentCalculator() {
                     <span>Investment Returns</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ backgroundColor: '#f59e0b' }}></div>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ backgroundColor: '#116b36' }}></div>
                     <span className="whitespace-nowrap">Scholarship Fund ({scholarshipPercentage}%)</span>
                   </div>
                 </div>
