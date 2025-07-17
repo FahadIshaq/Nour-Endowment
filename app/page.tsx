@@ -215,6 +215,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section> */}
+      <InvestmentCalculator/>
 
       {/* Our Goal Section */}
       <section className="py-20 bg-white">
@@ -357,7 +358,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -419,7 +420,7 @@ export default function HomePage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Gift Planting Section */}
       <section className="py-20 bg-[#f9f7f1]">
@@ -470,7 +471,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-      <InvestmentCalculator/>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">

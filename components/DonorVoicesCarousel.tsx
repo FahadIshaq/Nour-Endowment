@@ -86,10 +86,10 @@ export default function DonorVoicesCarousel() {
           {testimonials.map((t, i) => (
             <SwiperSlide key={i}>
               <div
-                className={`flex flex-col justify-between items-stretch rounded-2xl sm:rounded-3xl p-4 sm:p-8 h-[320px] w-full max-w-[320px] mx-auto shadow-md border border-emerald-100 mb-2 ${t.bg} ${t.text}`}
+                className={`flex flex-col justify-between items-stretch rounded-2xl sm:rounded-3xl p-4 sm:p-8 h-[320px] w-full max-w-[320px] mx-auto shadow-md  mb-2 ${t.bg} ${t.text}`}
                 style={{ boxSizing: 'border-box' }}
               >
-                <p className="text-base sm:text-xl md:text-2xl font-medium leading-snug mb-6 sm:mb-8 transition-all duration-500">“{t.quote}”</p>
+                <p className="text-base sm:text-xl md:text-2xl font-small leading-snug mb-6 sm:mb-8 transition-all duration-500">“{t.quote}”</p>
                 <div className="text-right text-base sm:text-lg font-semibold">{t.name}</div>
               </div>
             </SwiperSlide>

@@ -70,18 +70,18 @@ export default function InvestmentCalculator() {
           <div className="space-y-1">
             <p className="text-xs sm:text-sm">
               <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#1f2937' }}></span>
-              Principal: ${payload[0].payload.principal.toLocaleString()}
+              Principal: {payload[0].payload.principal.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm">
               <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#10b981' }}></span>
-              Returns: ${payload[0].payload.returns.toLocaleString()}
+              Returns: {payload[0].payload.returns.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm">
               <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#f59e0b' }}></span>
-              Scholarship Fund: ${payload[0].payload.scholarshipAmount.toLocaleString()}
+              Total Used for Education: {payload[0].payload.scholarshipAmount.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm font-semibold border-t pt-1 mt-2">
-              Total Value: ${payload[0].payload.totalValue.toLocaleString()}
+              Total Value: {payload[0].payload.totalValue.toLocaleString()}
             </p>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function InvestmentCalculator() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            See how your donation grows over 50 years and the impact it creates for Palestinian education
+            See how your donation grows over 50 years and the impact it creates for Education
           </motion.p>
         </div>
 
@@ -123,7 +123,7 @@ export default function InvestmentCalculator() {
             <Card>
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
-                  <DollarSign className="h-4 w-4 sm:h-5 sm:w-5" />
+                  {/* <DollarSign className="h-4 w-4 sm:h-5 sm:w-5" /> */}
                   Your Investment
                 </CardTitle>
                 <CardDescription className="text-sm">
@@ -135,7 +135,7 @@ export default function InvestmentCalculator() {
                   <div className="flex justify-between items-center mb-3 sm:mb-4">
                     <label className="text-sm font-medium">Donation Amount</label>
                     <Badge variant="outline" className="text-base sm:text-lg font-bold px-2 py-1">
-                      ${donationAmount[0].toLocaleString()}
+                      {donationAmount[0].toLocaleString()}
                     </Badge>
                   </div>
                   <Slider
@@ -147,8 +147,8 @@ export default function InvestmentCalculator() {
                     className="w-full"
                   />
                   <div className="flex justify-between text-xs text-muted-foreground mt-2">
-                    <span>$100</span>
-                    <span>$50,000</span>
+                    <span>100</span>
+                    <span>50,000</span>
                   </div>
                 </div>
 
@@ -181,7 +181,7 @@ export default function InvestmentCalculator() {
                 <div className="space-y-4 sm:space-y-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold" style={{ color: '#f59e0b' }}>
-                      ${totalScholarships.toLocaleString()}
+                      {totalScholarships.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                       Scholarship Fund Available (Year 50)
@@ -189,7 +189,7 @@ export default function InvestmentCalculator() {
                   </div>
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl font-bold" style={{ color: '#10b981' }}>
-                      ${finalYear?.returns.toLocaleString()}
+                      {finalYear?.returns.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                       Total Returns Generated
@@ -197,7 +197,7 @@ export default function InvestmentCalculator() {
                   </div>
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl font-bold text-primary">
-                      ${finalYear?.totalValue.toLocaleString()}
+                      {finalYear?.totalValue.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                       Final Investment Value
@@ -249,11 +249,11 @@ export default function InvestmentCalculator() {
                           tick={{ fontSize: 10 }}
                           tickFormatter={(value) => {
                             if (value >= 1000000) {
-                              return `$${(value / 1000000).toFixed(1)}M`;
+                              return `${(value / 1000000).toFixed(1)}M`;
                             } else if (value >= 1000) {
-                              return `$${(value / 1000).toFixed(0)}k`;
+                              return `${(value / 1000).toFixed(0)}k`;
                             }
-                            return `$${value}`;
+                            return `${value}`;
                           }}
                         />
                         <Tooltip content={<CustomTooltip />} />
