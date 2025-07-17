@@ -148,7 +148,7 @@ export default function InvestmentCalculator() {
                   />
                   <div className="flex justify-between text-xs text-muted-foreground mt-2">
                     <span>100</span>
-                    <span>50,000</span>
+                    <span>$50,000</span>
                   </div>
                 </div>
 
@@ -181,7 +181,7 @@ export default function InvestmentCalculator() {
                 <div className="space-y-4 sm:space-y-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold" style={{ color: '#116b36' }}>
-                      {totalScholarships.toLocaleString()}
+                      ${totalScholarships.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                       Scholarship Fund Available (Year 50)
@@ -189,7 +189,7 @@ export default function InvestmentCalculator() {
                   </div>
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl font-bold" style={{ color: '#116b36' }}>
-                      {finalYear?.returns.toLocaleString()}
+                      ${finalYear?.returns.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                       Total Returns Generated
@@ -197,7 +197,7 @@ export default function InvestmentCalculator() {
                   </div>
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl font-bold text-black">
-                      {finalYear?.totalValue.toLocaleString()}
+                      ${finalYear?.totalValue.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                       Final Investment Value
@@ -247,12 +247,13 @@ export default function InvestmentCalculator() {
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis 
                           dataKey="year" 
-                          tick={{ fontSize: 10 }}
+                          tick={{ fontSize: 10, fontWeight: 'bold',  }}
                           tickFormatter={(value) => `Y${value}`}
                           interval={0}
+                          axisLine={{  strokeWidth: 2 }}
                         />
                         <YAxis 
-                          tick={{ fontSize: 10 }}
+                          tick={{ fontSize: 10, fontWeight: 'bold', }}
                           tickFormatter={(value) => {
                             if (value >= 1000000) {
                               return `${(value / 1000000).toFixed(1)}M`;
@@ -261,6 +262,7 @@ export default function InvestmentCalculator() {
                             }
                             return `${value}`;
                           }}
+                          axisLine={{ stroke: 'black', strokeWidth: 2 }}
                         />
                         <Tooltip content={<CustomTooltip />} />
                         
@@ -306,7 +308,7 @@ export default function InvestmentCalculator() {
                       backgroundImage: 'repeating-linear-gradient(45deg, black, black 2px, #116b36 2px, #116b36 6px)',
                       backgroundColor: '#116b36'
                     }}></div>
-                    <span className="whitespace-nowrap">Scholarship Fund ({scholarshipPercentage}%)</span>
+                    <span className="whitespace-nowrap">Total Used for Education ({scholarshipPercentage}%)</span>
                   </div>
                 </div>
               </CardContent>

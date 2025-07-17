@@ -292,7 +292,6 @@ export default function HomePage() {
       </section>
 
       {/* Donor Voices Carousel */}
-      <DonorVoicesCarousel />
 
       {/* How It Works */}
       <section className="py-20 bg-[#f9f7f1]">
@@ -356,6 +355,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+      <DonorVoicesCarousel />
 
       {/* Why Choose Us */}
       {/* <section className="py-20 bg-white">
