@@ -54,7 +54,7 @@ export default function InvestmentCalculator() {
     },
     returns: {
       label: "Returns",
-      color: "#10b981", // Modern green
+      color: "#116b36", // Modern green
     },
     scholarshipAmount: {
       label: "Scholarship Fund",
@@ -73,7 +73,7 @@ export default function InvestmentCalculator() {
               Principal: {payload[0].payload.principal.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm">
-              <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#10b981' }}></span>
+              <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded mr-1 sm:mr-2" style={{ backgroundColor: '#116b36' }}></span>
               Returns: {payload[0].payload.returns.toLocaleString()}
             </p>
             <p className="text-xs sm:text-sm">
@@ -188,7 +188,7 @@ export default function InvestmentCalculator() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-xl sm:text-2xl font-bold" style={{ color: '#10b981' }}>
+                    <div className="text-xl sm:text-2xl font-bold" style={{ color: '#116b36' }}>
                       {finalYear?.returns.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
@@ -238,6 +238,12 @@ export default function InvestmentCalculator() {
                           bottom: 5 
                         }}
                       >
+                        <defs>
+                          <pattern id="scholarshipPattern" patternUnits="userSpaceOnUse" width="12" height="12">
+                            <rect width="12" height="12" fill="#116b36"/>
+                            <path d="M-6,6 l12,-12 M-3,9 l12,-12 M0,12 l12,-12 M3,15 l12,-12 M6,18 l12,-12" stroke="black" strokeWidth="1.5" fill="none"/>
+                          </pattern>
+                        </defs>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis 
                           dataKey="year" 
@@ -277,7 +283,7 @@ export default function InvestmentCalculator() {
                         <Bar 
                           dataKey="scholarshipAmount" 
                           stackId="investment"
-                          fill="var(--color-scholarshipAmount)"
+                          fill="url(#scholarshipPattern)"
                           radius={[4, 4, 0, 0]}
                         />
                       </BarChart>
@@ -292,11 +298,14 @@ export default function InvestmentCalculator() {
                     <span>Principal Investment</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ backgroundColor: '#10b981' }}></div>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ backgroundColor: '#116b36' }}></div>
                     <span>Investment Returns</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ backgroundColor: '#116b36' }}></div>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded" style={{ 
+                      backgroundImage: 'repeating-linear-gradient(45deg, black, black 2px, #116b36 2px, #116b36 6px)',
+                      backgroundColor: '#116b36'
+                    }}></div>
                     <span className="whitespace-nowrap">Scholarship Fund ({scholarshipPercentage}%)</span>
                   </div>
                 </div>
