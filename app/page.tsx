@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Heart, ArrowRight, Award, Shield, CheckCircle, Globe, BookOpen, UserCheck, Target, Infinity, HelpCircle } from "lucide-react"
 import Link from "next/link"
 import DonorVoicesCarousel from "@/components/DonorVoicesCarousel"
+import InvestmentCalculator from "@/components/InvestmentCalculator"
 import {
   Accordion,
   AccordionContent,
@@ -469,6 +470,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+      <InvestmentCalculator/>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
