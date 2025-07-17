@@ -135,7 +135,7 @@ export default function InvestmentCalculator() {
                   <div className="flex justify-between items-center mb-3 sm:mb-4">
                     <label className="text-sm font-medium">Donation Amount</label>
                     <Badge variant="outline" className="text-base sm:text-lg font-bold px-2 py-1">
-                      {donationAmount[0].toLocaleString()}
+                      ${donationAmount[0].toLocaleString()}
                     </Badge>
                   </div>
                   <Slider
