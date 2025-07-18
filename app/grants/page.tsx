@@ -105,32 +105,38 @@ export default function ProjectsPage() {
                 </p>
                 
                 <div className="space-y-8">
-                  <div>
-                    <h3 className="text-2xl font-bold text-black mb-4">What We Offer</h3>
-                    <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                      Nour Scholars receive financial assistance to help cover tuition, fees, and other educational expenses. Awards are tailored to each scholar's needs, enabling them to focus on academic and personal growth.
-                    </p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-black mb-6">What We Offer</h3>
 
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <Card className="p-6 bg-[#f9f7f1] border border-[#116b36]/20">
-                      <div className="flex items-start gap-3">
-                        <Users className="w-8 h-8 text-[#116b36] mt-1 flex-shrink-0" />
-                        <div>
-                          <h4 className="text-xl font-bold text-black mb-3">1-on-1 Mentorship</h4>
-                          <p className="text-slate-700 leading-relaxed">
+                  <div className="grid grid-cols-1 gap-6 lg:gap-8 max-w-4xl mx-auto">
+                    <Card className="p-4 sm:p-6 bg-[#f9f7f1] border border-[#116b36]/20 h-full">
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-3 h-full">
+                        <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-[#116b36] mt-1 flex-shrink-0" />
+                        <div className="flex-1">
+                          <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">Scholarships</h4>
+                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                            Nour Scholars receive financial assistance to help cover tuition, fees, and other educational expenses. Awards are tailored to each scholar's needs, enabling them to focus on academic and personal growth.
+                          </p>
+                        </div>
+                      </div>
+                    </Card>
+                    <Card className="p-4 sm:p-6 bg-[#f9f7f1] border border-[#116b36]/20 h-full">
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-3 h-full">
+                        <Users className="w-6 h-6 sm:w-8 sm:h-8 text-[#116b36] mt-1 flex-shrink-0" />
+                        <div className="flex-1">
+                          <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">1-on-1 Mentorship</h4>
+                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                             Every Nour Scholar is paired with a dedicated mentor from our global network of professionals, academics, and community leaders. Mentorship includes career coaching, academic support, and guidance on personal and professional development.
                           </p>
                         </div>
                       </div>
                     </Card>
 
-                    <Card className="p-6 bg-[#f9f7f1] border border-[#116b36]/20">
-                      <div className="flex items-start gap-3">
-                        <Award className="w-8 h-8 text-[#116b36] mt-1 flex-shrink-0" />
-                        <div>
-                          <h4 className="text-xl font-bold text-black mb-3">Leadership & Impact</h4>
-                          <p className="text-slate-700 leading-relaxed">
+                    <Card className="p-4 sm:p-6 bg-[#f9f7f1] border border-[#116b36]/20 h-full">
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-3 h-full">
+                        <Award className="w-6 h-6 sm:w-8 sm:h-8 text-[#116b36] mt-1 flex-shrink-0" />
+                        <div className="flex-1">
+                          <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">Leadership & Impact</h4>
+                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                             Scholars join a vibrant peer network committed to service, innovation, and justice. Scholars join a diverse, purpose-driven cohort of individuals from different backgrounds and lived experiences. Together, they engage in hands-on projects, immersive learning experiences, and deep collaboration to address real-world challenges and drive meaningful change.
                           </p>
                         </div>
