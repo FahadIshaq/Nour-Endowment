@@ -54,12 +54,12 @@ export default function ProjectsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Apply for a Grant
+             Nour Scholars Program
+
             </motion.h1>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuz3wc6c95iw2BDDR4_BZVMr85FyTtr5EdEBsWAUwdlHRww/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
               <button className="mb-8 bg-[#116b36] hover:bg-[#0a5a2c] text-white font-semibold py-3 px-8 rounded-xl text-lg shadow transition-all duration-300">
-                Grant Application
-              </button>
+Apply Now              </button>
             </a>
             <motion.p
               className="text-xl text-slate-600 leading-relaxed mb-8"
@@ -67,8 +67,9 @@ export default function ProjectsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              At Nour Endowment we are dedicated to increasing access to education, empowering our communities, and unlocking pathways to opportunity to create a sustainable cycle of self-reliance. If you are a student from a marginalized community who shares our vision and is aligned with our mission, we encourage you to apply for a grant.
-            </motion.p>
+Empowering the Next Generation of Changemakers
+
+</motion.p>
           </div>
         </div>
       </section>
@@ -76,7 +77,7 @@ export default function ProjectsPage() {
       {/* Nour Scholars Program Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -89,7 +90,7 @@ export default function ProjectsPage() {
             <p className="text-xl text-slate-600 leading-relaxed">
               Empowering the Next Generation of Changemakers
             </p>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -167,7 +168,6 @@ export default function ProjectsPage() {
                   "Eligible applicants must be high school students applying to or accepted by a U.S. university, or current undergraduate students actively enrolled at a U.S. university.",
                   "Applicants must either reside in the U.S. or hold valid documentation authorizing them to live and study in the U.S. for the duration of their academic program.",
                   "Applicants must demonstrate a commitment to the values and mission of the Nour Endowment.",
-                  "Preference may be given to applicants who demonstrate financial need."
                 ].map((item, idx) => (
                   <Card key={idx} className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full w-full">
                     <CheckCircle className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
@@ -176,7 +176,7 @@ export default function ProjectsPage() {
                 ))}
               </div>
               <p className="text-lg text-slate-700 leading-relaxed mt-4">
-                <span className="font-semibold text-[#116b36]">Note:</span> While this is not an official requirement, preference will be given to students who demonstrate financial need, as determined by a standardized financial aid assessment or documentation of family circumstances.
+                <span className="font-semibold text-[#116b36]">Note:</span> Preference may be given to applicants who demonstrate financial need.
               </p>
             </CardContent>
           </Card>
@@ -201,30 +201,36 @@ export default function ProjectsPage() {
                   <Card className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full">
                     <FileText className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
                     <div>
-                      <span className="font-semibold text-[#116b36]">Application Materials:</span>
+                      <span className="font-semibold text-[#116b36]">Review Process:</span>
                       <p className="text-lg text-slate-700 leading-relaxed mt-1">
-                        Along with the application form, applicants are required to submit their academic transcripts, recommendation letters from three references, standardized testing scores (if applicable), and university acceptance letter(s) (if applicable).
-                      </p>
+                      A Selection Committee reviews all applications based on alignment with our mission, impact potential, and financial need.                      </p>
                     </div>
                   </Card>
                   {/* Step 2 */}
                   <Card className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full">
                     <Users className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
                     <div>
-                      <span className="font-semibold text-[#116b36]">Committee Review:</span>
+                      <span className="font-semibold text-[#116b36]">Application Requirements:</span>
                       <p className="text-lg text-slate-700 leading-relaxed mt-1">
-                        The Selection Committee will make recommendations to the Board of Directors, which makes final funding decisions by majority vote.
-                      </p>
+                      Applicants must submit the application form, academic transcripts, two recommendation letters, and, if applicable, standardized test scores and university acceptance letters.                      </p>
                     </div>
                   </Card>
                   {/* Step 3 */}
                   <Card className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full">
+                  <CheckCircle className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
+                  <div>
+                      <span className="font-semibold text-[#116b36]">Final Selection:</span>
+                      <p className="text-lg text-slate-700 leading-relaxed mt-1">
+                      The Selection Committee will recommend candidates to the Board of Directors, which makes final decisions by vote.                      </p>
+                    </div>
+                  </Card>
+                  {/* Step 4 */}
+                  <Card className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full">
                     <Mail className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />
                     <div>
-                      <span className="font-semibold text-[#116b36]">Notification:</span>
-                      <p className="text-lg text-slate-700 leading-relaxed mt-1">
-                        All applicants will be notified of final decisions via email.
-                      </p>
+                      <span className="font-semibold text-[#116b36]">Outcome:</span>
+                      <p className="text-lg text-slate-700 leading-relaxed mt-1"> 
+                      All applicants will be notified of the final decision by email.               </p>
                     </div>
                   </Card>
                 </div>

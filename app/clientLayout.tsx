@@ -69,7 +69,7 @@ export default function ClientLayout({
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Grants", href: "/grants" },
+    { name: "Scholars", href: "/grants" },
     { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
   ]

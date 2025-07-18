@@ -313,7 +313,7 @@ export default function InvestmentCalculator() {
                   
                 </div>
                 <div className="mt-6 px-4 py-3 bg-muted/30 border border-muted-foreground/20 rounded-md text-[11px] sm:text-xs text-muted-foreground leading-relaxed text-center sm:text-left">
-  <strong className="font-semibold">Disclaimer:</strong> This chart is for illustrative purposes only and does not guarantee actual returns. The projected growth assumes a hypothetical 10% annual return rate, which may be higher or lower than real-world performance. Actual returns will vary based on market conditions and how much of the endowment is allocated to grants or scholarships in any given year. Past performance is not indicative of future results.
+  <strong className="font-semibold">Disclaimer:</strong> This chart is for illustrative purposes only and does not guarantee actual returns. Past performance is not indicative of future results.
 </div>
 
 
