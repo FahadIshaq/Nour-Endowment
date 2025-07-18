@@ -83,14 +83,14 @@ export default function ProjectsPage() {
           <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#116b36]">
             <CardContent>
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                To be eligible for a Nour Endowment grant, applicants must meet the following criteria:
+              Eligibility for a Nour Scholarship requires applicants to meet the following criteria:
               </p>
               <div className="flex flex-col gap-6 mb-6">
                 {[
-                  "Identify as a member of a marginalized community",
-                  "Be either a high school student applying to, or already accepted at, an American university, or a current college student enrolled at an American university",
-                  "Reside in the United States, or possess documentation permitting them to live and study in the U.S. for the duration of their studies",
-                  "Demonstrate a commitment to the values and mission of the Nour Endowment through past activities, volunteer work, or leadership roles."
+                  "Eligible applicants must be high school students applying to or accepted by a U.S. university, or current undergraduate students actively enrolled at a U.S. university.",
+                  "Applicants must either reside in the U.S. or hold valid documentation authorizing them to live and study in the U.S. for the duration of their academic program.",
+                  "Applicants must demonstrate a commitment to the values and mission of the Nour Endowment.",
+                  "Preference may be given to applicants who demonstrate financial need."
                 ].map((item, idx) => (
                   <Card key={idx} className="flex items-start gap-3 p-5 bg-white border border-[#116b36]/20 rounded-2xl shadow-md h-full w-full">
                     <CheckCircle className="w-6 h-6 text-[#116b36] mt-1 flex-shrink-0" />

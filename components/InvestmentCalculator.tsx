@@ -184,7 +184,7 @@ export default function InvestmentCalculator() {
                       ${totalScholarships.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-muted-foreground mt-1">
-                      Scholarship Fund Available (Year 50)
+                      Total Used for Education
                     </div>
                   </div>
                   <div className="text-center">
@@ -310,8 +310,15 @@ export default function InvestmentCalculator() {
                     }}></div>
                     <span className="whitespace-nowrap">Total Used for Education ({scholarshipPercentage}%)</span>
                   </div>
+                  
                 </div>
+                <div className="mt-6 px-4 py-3 bg-muted/30 border border-muted-foreground/20 rounded-md text-[11px] sm:text-xs text-muted-foreground leading-relaxed text-center sm:text-left">
+  <strong className="font-semibold">Disclaimer:</strong> This chart is for illustrative purposes only and does not guarantee actual returns. The projected growth assumes a hypothetical 10% annual return rate, which may be higher or lower than real-world performance. Actual returns will vary based on market conditions and how much of the endowment is allocated to grants or scholarships in any given year. Past performance is not indicative of future results.
+</div>
+
+
               </CardContent>
+              
             </Card>
           </motion.div>
         </div>

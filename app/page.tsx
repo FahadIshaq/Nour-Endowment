@@ -46,14 +46,14 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <motion.div
+              {/* <motion.div
                 className="inline-block px-4 py-2 bg-[#116b36] text-white rounded-full text-sm font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
                 Nour Endowment 2025
-              </motion.div>
+              </motion.div> */}
 
               <motion.h1
                 className="text-4xl lg:text-5xl font-bold leading-tight text-black"
@@ -568,7 +568,7 @@ export default function HomePage() {
                     variant="outline"
                     className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-[#116b36] bg-transparent"
                   >
-                    See Our Projects
+                    Scholarship Application
                   </Button>
                 </motion.div>
               </Link>
