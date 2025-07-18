@@ -339,6 +339,8 @@ export default function HomePage() {
               },
             ].map((step, index) => (
               <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
+                            <Link href="/donate">
+
                 <Card className="relative flex flex-col items-center text-center rounded-3xl bg-white border border-[#116b36]/20 shadow-xl hover:shadow-[#116b36]/20 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs p-8 group overflow-hidden">
                   {/* Floating Icon with Glow */}
                   <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-[#116b36] opacity-80 blur-md" />
@@ -350,6 +352,7 @@ export default function HomePage() {
                   <div className="text-xl font-bold mb-2 text-black">{step.title}</div>
                   <div className="text-slate-600 leading-relaxed text-center">{step.description}</div>
                 </Card>
+                </Link>
               </motion.div>
             ))}
           </motion.div>
