@@ -73,8 +73,79 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      {/* Nour Scholars Program Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              Nour Scholars Program
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              Empowering the Next Generation of Changemakers
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-12"
+          >
+            <Card className="bg-white/90 border-0 shadow-xl border-l-4 border-[#116b36]">
+              <CardContent className="p-8">
+                <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                  The Nour Scholars Program invests in driven students committed to education, leadership, and social impact. Through a combination of financial support and personalized mentorship, we aim to cultivate a community of scholars who will create meaningful change in their communities and beyond.
+                </p>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-black mb-4">What We Offer</h3>
+                    <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                      Nour Scholars receive financial assistance to help cover tuition, fees, and other educational expenses. Awards are tailored to each scholar's needs, enabling them to focus on academic and personal growth.
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <Card className="p-6 bg-[#f9f7f1] border border-[#116b36]/20">
+                      <div className="flex items-start gap-3">
+                        <Users className="w-8 h-8 text-[#116b36] mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="text-xl font-bold text-black mb-3">1-on-1 Mentorship</h4>
+                          <p className="text-slate-700 leading-relaxed">
+                            Every Nour Scholar is paired with a dedicated mentor from our global network of professionals, academics, and community leaders. Mentorship includes career coaching, academic support, and guidance on personal and professional development.
+                          </p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-6 bg-[#f9f7f1] border border-[#116b36]/20">
+                      <div className="flex items-start gap-3">
+                        <Award className="w-8 h-8 text-[#116b36] mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="text-xl font-bold text-black mb-3">Leadership & Impact</h4>
+                          <p className="text-slate-700 leading-relaxed">
+                            Scholars join a vibrant peer network committed to service, innovation, and justice. Scholars join a diverse, purpose-driven cohort of individuals from different backgrounds and lived experiences. Together, they engage in hands-on projects, immersive learning experiences, and deep collaboration to address real-world challenges and drive meaningful change.
+                          </p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Eligibility Criteria Section */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-[#f9f7f1]">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="flex items-center mb-6 gap-3">
             <Award className="w-8 h-8 text-[#116b36]" />
@@ -107,7 +178,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Selection Process Section */}
-      <section className="py-12 bg-[#f9f7f1]">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="flex items-center mb-6 gap-3">
             <CheckCircle className="w-8 h-8 text-[#116b36]" />
