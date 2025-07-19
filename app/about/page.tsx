@@ -156,34 +156,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
       </section>
 
       {/* Three Pillars of Success Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        {/* Background Images - Seamlessly Blended */}
-        <div className="absolute inset-0 flex">
-          <div className="flex-1 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white/95"></div>
-            <img
-              src="/education-pillar.jpg"
-              alt="Education"
-              className="w-full h-full object-cover opacity-20 mix-blend-multiply"
-            />
-          </div>
-          <div className="flex-1 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white/95"></div>
-            <img
-              src="/mentorship-pillar.jpg"
-              alt="Mentorship"
-              className="w-full h-full object-cover opacity-20 mix-blend-multiply"
-            />
-          </div>
-          <div className="flex-1 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white/95"></div>
-            <img
-              src="/community-pillar.jpg"
-              alt="Community"
-              className="w-full h-full object-cover opacity-20 mix-blend-multiply"
-            />
-          </div>
-        </div>
+      <section className="py-20 bg-white">
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -228,22 +201,18 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                 image: "/image.png"
               }
             ].map((pillar, index) => (
-              <motion.div key={index} variants={fadeInUp} className="relative">
-                <Card className="h-full bg-white border border-[#116b36]/20 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={pillar.image}
-                      alt={pillar.title}
-                      className="w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold text-black mb-4">{pillar.title}</h3>
-                    <p className="text-slate-700 leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </CardContent>
-                </Card>
+              <motion.div key={index} variants={fadeInUp} className="text-center">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-[#116b36] mb-4">{pillar.title}</h3>
+                  <img
+                    src={pillar.image}
+                    alt={pillar.title}
+                    className="w-full max-w-sm mx-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                <p className="text-slate-700 leading-relaxed text-sm">
+                  {pillar.description}
+                </p>
               </motion.div>
             ))}
           </motion.div>
