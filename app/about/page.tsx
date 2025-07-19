@@ -203,7 +203,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
             ].map((pillar, index) => (
               <motion.div key={index} variants={fadeInUp} className="text-center">
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-[#116b36] mb-4">{pillar.title}</h3>
+                  <h3 className="text-4xl lg:text-5xl font-bold text-[#116b36] mb-6">{pillar.title}</h3>
                   <img
                     src={pillar.image}
                     alt={pillar.title}
