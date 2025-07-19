@@ -187,17 +187,17 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
             {[
               {
                 title: "Education",
-                description: "As the foundation of growth, education empowers individuals with knowledge, critical thinking, and the tools needed to navigate complex challenges. It opens doors, broadens perspectives, and provides the confidence to pursue meaningful goals.",
+                description: "As the foundation of growth, education empowers individuals with knowledge, critical thinking, and problem-solving skills. It opens doors, broadens perspectives, and builds confidence to pursue goals, unlocking potential.",
                 image: "/image.png"
               },
               {
                 title: "Mentorship",
-                description: "As an accelerator of learning and development, mentorship connects individuals with those who have walked the path before. A mentor offers guidance, encouragement, and real-world insight—helping to avoid pitfalls and make informed decisions.",
+                description: "2. As an accelerator of learning and development, mentorship connects individuals with those who have walked the path before. Mentors provide support, guidance, and help navigating challenges, turning ambition into action.",
                 image: "/image.png"
               },
               {
                 title: "Community",
-                description: "As a support system, your community provides a sense of belonging that fuels resilience and purpose. Through community, ideas are shared, collaborations are formed, and collective progress is made. A strong community uplifts, inspires, and makes success sustainable.",
+                description: "3. As a support system, your community provides a sense of belonging that fuels resilience and purpose. A strong community uplifts, inspires, and makes success sustainable.",
                 image: "/image.png"
               }
             ].map((pillar, index) => (
