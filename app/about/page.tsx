@@ -210,7 +210,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                     className="w-full max-w-sm mx-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <p className="text-slate-700 leading-relaxed text-base text-justify">
+                <p className="text-slate-700 leading-relaxed text-base text-justify max-w-sm mx-auto md:max-w-none">
                   {pillar.description}
                 </p>
               </motion.div>
