@@ -155,6 +155,101 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
         </div>
       </section>
 
+      {/* Three Pillars of Success Section */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Background Images - Seamlessly Blended */}
+        <div className="absolute inset-0 flex">
+          <div className="flex-1 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white/95"></div>
+            <img
+              src="/education-pillar.jpg"
+              alt="Education"
+              className="w-full h-full object-cover opacity-20 mix-blend-multiply"
+            />
+          </div>
+          <div className="flex-1 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white/95"></div>
+            <img
+              src="/mentorship-pillar.jpg"
+              alt="Mentorship"
+              className="w-full h-full object-cover opacity-20 mix-blend-multiply"
+            />
+          </div>
+          <div className="flex-1 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white/95"></div>
+            <img
+              src="/community-pillar.jpg"
+              alt="Community"
+              className="w-full h-full object-cover opacity-20 mix-blend-multiply"
+            />
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+              Three Pillars of Success
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
+            >
+              Together, Education, Mentorship, and Community form the three pillars of success. Each essential, each reinforcing the others, and all necessary to build a sustainable future.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          >
+            {[
+              {
+                title: "Education",
+                description: "As the foundation of growth, education empowers individuals with knowledge, critical thinking, and the tools needed to navigate complex challenges. It opens doors, broadens perspectives, and provides the confidence to pursue meaningful goals.",
+                image: "/image.png"
+              },
+              {
+                title: "Mentorship",
+                description: "As an accelerator of learning and development, mentorship connects individuals with those who have walked the path before. A mentor offers guidance, encouragement, and real-world insight—helping to avoid pitfalls and make informed decisions.",
+                image: "/image.png"
+              },
+              {
+                title: "Community",
+                description: "As a support system, your community provides a sense of belonging that fuels resilience and purpose. Through community, ideas are shared, collaborations are formed, and collective progress is made. A strong community uplifts, inspires, and makes success sustainable.",
+                image: "/image.png"
+              }
+            ].map((pillar, index) => (
+              <motion.div key={index} variants={fadeInUp} className="relative">
+                <Card className="h-full bg-white border border-[#116b36]/20 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={pillar.image}
+                      alt={pillar.title}
+                      className="w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-2xl font-bold text-black mb-4">{pillar.title}</h3>
+                    <p className="text-slate-700 leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="py-20 bg-[#f9f7f1]">
         <div className="container mx-auto px-4">
