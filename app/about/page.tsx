@@ -182,7 +182,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-7xl mx-auto"
           >
             {[
               {
@@ -210,7 +210,7 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
                     className="w-full max-w-sm mx-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <p className="text-slate-700 leading-relaxed text-sm">
+                <p className="text-slate-700 leading-relaxed text-base text-justify">
                   {pillar.description}
                 </p>
               </motion.div>
