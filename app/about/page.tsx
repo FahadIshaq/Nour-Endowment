@@ -192,12 +192,12 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
               },
               {
                 title: "Mentorship",
-                description: "2. As an accelerator of learning and development, mentorship connects individuals with those who have walked the path before. Mentors provide support, guidance, and help navigating challenges, turning ambition into action.",
+                description: "As an accelerator of learning and development, mentorship connects individuals with those who have walked the path before. Mentors provide support, guidance, and help navigating challenges, turning ambition into action.",
                 image: "/image.png"
               },
               {
                 title: "Community",
-                description: "3. As a support system, your community provides a sense of belonging that fuels resilience and purpose. A strong community uplifts, inspires, and makes success sustainable.",
+                description: "As a support system, your community provides a sense of belonging that fuels resilience and purpose. A strong community uplifts, inspires, and makes success sustainable.",
                 image: "/image.png"
               }
             ].map((pillar, index) => (
