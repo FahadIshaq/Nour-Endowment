@@ -250,6 +250,7 @@ Empowering the Next Generation of Changemakers
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
+            {/* First row: 3 items */}
             {[
               {
                 icon: GraduationCap,
@@ -281,8 +282,7 @@ Empowering the Next Generation of Changemakers
                 description:
                   "Support students pursuing higher education through investments in scholarships, fellowships, and opportunities that foster academic and professional growth for individuals from diverse and underserved backgrounds.",
               },
-              
-            ].map((area, index) => (
+            ].slice(0, 3).map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#116b36]/20 bg-white">
                   <CardHeader>
@@ -301,6 +301,41 @@ Empowering the Next Generation of Changemakers
                 </Card>
               </motion.div>
             ))}
+            {/* Second row: center the 2 items */}
+            <div className="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center gap-8">
+              {[
+                {
+                  icon: Users,
+                  title: "Community Empowerment",
+                  description:
+                    "Strengthen educational infrastructure, enhance teacher development, and deliver job-skills training through community-driven programs that foster long-term resilience and economic opportunity.",
+                },
+                {
+                  icon: Building,
+                  title: "Higher Education Access",
+                  description:
+                    "Support students pursuing higher education through investments in scholarships, fellowships, and opportunities that foster academic and professional growth for individuals from diverse and underserved backgrounds.",
+                },
+              ].map((area, index) => (
+                <motion.div key={index} variants={fadeInUp} className="w-full max-w-lg">
+                  <Card className="h-full hover:shadow-xl transition-all duration-300 border border-[#116b36]/20 bg-white">
+                    <CardHeader>
+                      <motion.div
+                        className="w-16 h-16 rounded-2xl bg-[#116b36] flex items-center justify-center mb-4"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <area.icon className="w-8 h-8 text-white" />
+                      </motion.div>
+                      <CardTitle className="text-xl font-bold text-black">{area.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-slate-600 leading-relaxed">{area.description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>

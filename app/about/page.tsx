@@ -167,13 +167,13 @@ To Build a Sustainable Endowment That Reinvests In Marginalized Communities Thro
             className="text-center mb-16"
           >
             <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold mb-6 text-black">
-              Three Pillars of Success
+              Our Three Pillars of Success
             </motion.h2>
             <motion.p
               variants={fadeInUp}
               className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
             >
-              Together, Education, Mentorship, and Community form the three pillars of success. Each essential, each reinforcing the others, and all necessary to build a sustainable future.
+              We believe that together, Education, Mentorship, and Community form the three pillars of success. Each essential, each reinforcing the others, and all necessary to build a sustainable future.
             </motion.p>
           </motion.div>
 

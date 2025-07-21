@@ -83,17 +83,17 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Get in Touch
+              Have any questions? Want to partner with us?
             </motion.h1>
 
-            <motion.p
+            {/* <motion.p
               className="text-xl lg:text-2xl text-slate-600 leading-relaxed mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               Have questions about our programs? Want to partner with us? 
-            </motion.p>
+            </motion.p> */}
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
