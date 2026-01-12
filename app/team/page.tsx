@@ -37,6 +37,7 @@ const scaleOnHover = {
 export default function TeamPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [openAdvIndex, setOpenAdvIndex] = useState<number | null>(null)
+  const [openCoFounderIndex, setOpenCoFounderIndex] = useState<number | null>(null)
   return (
     <div>
       {/* Hero Section */}
@@ -61,6 +62,113 @@ export default function TeamPage() {
               Meet the dedicated individuals working to create change through education.
             </motion.p>
           </div>
+        </div>
+      </section>
+
+      {/* Co-Founders Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <motion.h3 variants={fadeInUp} className="text-4xl font-extrabold text-center mb-4 text-[#116b36] drop-shadow-lg tracking-wide">
+              Co-Founders
+            </motion.h3>
+            <div className="flex justify-center mb-12">
+              <div className="w-24 h-1 rounded-full bg-[#116b36]" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {[
+                {
+                  name: "Mohammad Hammad II",
+                  role: "Co-Founder",
+                  image: "/mohammad.jpeg",
+                  linkedin: "https://www.linkedin.com/in/mohammadhammadll",
+                  bio: `Mohammad Hammad is a freshman at Lansing Community College and an intern at Morgan Stanley Wealth Management. His experience includes portfolio analysis, risk assessment, and supporting investment decision-making in a client-facing environment. Mohammad is deeply interested in finance, investment banking, and long-term value creation, and is actively building his technical and analytical skill set early in his career. He is also passionate about expanding access to opportunity and is developing a philanthropic initiative focused on funding scholarships and improving educational access. Through a combination of professional experience, academic focus, and community-driven goals, Mohammad is building a career at the intersection of finance, impact, and institutional-scale decision-making.`
+                },
+              ].map((member, index) => (
+                <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
+                  <Dialog open={openCoFounderIndex === index} onOpenChange={open => setOpenCoFounderIndex(open ? index : null)}>
+                    <Card className="w-full max-w-xs flex flex-col items-center justify-between bg-white rounded-3xl border border-[#116b36]/20 shadow-xl hover:shadow-[#116b36]/20 hover:-translate-y-2 hover:scale-[1.025] transition-all duration-300 p-6 group">
+                      <CardHeader className="w-full flex flex-col items-center">
+                        {/* Decorative accent */}
+                        <div className="w-8 h-1 rounded-full bg-[#116b36] mb-4 group-hover:bg-[#116b36]/80 transition" />
+                        <div className="w-36 h-36 rounded-full overflow-hidden flex items-center justify-center mb-4 border-4 border-[#116b36]/20 shadow-md bg-white">
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-full object-cover object-top"
+                          />
+                        </div>
+                        <CardTitle className="text-2xl font-extrabold text-center text-[#116b36] tracking-wide drop-shadow-sm">
+                          {member.name}
+                        </CardTitle>
+                        <div className="flex items-center gap-2 mb-2 mt-1">
+                          <CardDescription className="text-slate-600 text-center">{member.role}</CardDescription>
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`LinkedIn profile of ${member.name}`}
+                            className="ml-1 text-blue-600 hover:text-[#116b36]/80 transition"
+                          >
+                            <Linkedin className="w-5 h-5" />
+                          </a>
+                        </div>
+                      </CardHeader>
+                      <motion.div {...scaleOnHover} className="mt-4 w-full flex justify-center">
+                        <DialogTrigger asChild>
+                          <Button variant="outline" size="sm" className="w-full max-w-[140px] group-hover:border-[#116b36] group-hover:text-[#116b36]">
+                            Learn More
+                          </Button>
+                        </DialogTrigger>
+                      </motion.div>
+                    </Card>
+                    <DialogContent className="max-w-2xl w-[95vw] max-h-[90vh] bg-white/90 backdrop-blur-lg border-0 shadow-2xl rounded-3xl p-0 overflow-hidden">
+                      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 p-3 md:p-8 overflow-y-auto max-h-[70vh] hide-scrollbar">
+                        <div className="w-full flex justify-center md:block md:w-auto mb-4 md:mb-0">
+                          <img 
+                            src={member.image} 
+                            alt={member.name} 
+                            className="w-32 h-32 md:w-48 md:h-48 rounded-2xl object-cover border-4 border-emerald-100 shadow-lg object-top"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0 w-full">
+                          <DialogHeader>
+                            <DialogTitle className="text-2xl md:text-3xl font-extrabold text-[#116b36] mb-2">
+                              {member.name}
+                            </DialogTitle>
+                            <DialogDescription className="text-base md:text-lg text-slate-700 mb-2 font-semibold">
+                              {member.role}
+                            </DialogDescription>
+                          </DialogHeader>
+                          <div className="flex items-center gap-3 mb-6">
+                            <a
+                              href={member.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`LinkedIn profile of ${member.name}`}
+                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#116b36]/20 text-[#116b36] hover:bg-[#116b36] hover:text-white transition-all duration-300 hover:shadow-md"
+                            >
+                              <Linkedin className="w-4 h-4" />
+                              <span className="text-sm font-semibold tracking-wide">LinkedIn</span>
+                            </a>
+                          </div>
+                          <div className="text-slate-700 text-sm md:text-base whitespace-pre-line leading-relaxed">
+                            {member.bio}
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
