@@ -100,7 +100,7 @@ export default function TeamPage() {
                   name: "Afira Arshad",
                   role: "Board Member",
                   image: "/new_member.jpeg",
-                  linkedin: "",
+                  linkedin: "https://www.linkedin.com/in/afira-arshad/",
                   bio: `Afira Arshad is a Master’s student in Education Policy and Analysis at the Harvard Graduate School of Education, where her work focuses on educational equity and systemic reform. She previously worked in Alumni Engagement and Development at Yale Law School, where she supported strategic fundraising initiatives and helped lead the school’s inaugural Giving Day, which raised $2.1 million. Afira earned her bachelor’s degree in Advertising Management from Michigan State University.\n\nAfira is deeply committed to expanding access to education and building systems that create long-term opportunity. Her work sits at the intersection of policy, philanthropy, and community engagement, with a focus on addressing resource gaps and supporting students from underserved communities.`
                 },
                 {
