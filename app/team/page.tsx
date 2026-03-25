@@ -97,6 +97,13 @@ export default function TeamPage() {
                   bio: `Sara is a Master's student at the University of Michigan and a healthcare consultant at Chartis, with 6+ years of experience working with nonprofits at the intersection of public health, health equity, and education access. She holds dual bachelor's degrees in Biology and Psychology from Michigan.\n\nSara played a pivotal role in launching a tutoring program for underserved students. She is passionate about social impact and committed to empowering others through education and access.`
                 },
                 {
+                  name: "Afira Arshad",
+                  role: "Board Member",
+                  image: "/new_member.jpeg",
+                  linkedin: "",
+                  bio: `Afira Arshad is a Master’s student in Education Policy and Analysis at the Harvard Graduate School of Education, where her work focuses on educational equity and systemic reform. She previously worked in Alumni Engagement and Development at Yale Law School, where she supported strategic fundraising initiatives and helped lead the school’s inaugural Giving Day, which raised $2.1 million. Afira earned her bachelor’s degree in Advertising Management from Michigan State University.\n\nAfira is deeply committed to expanding access to education and building systems that create long-term opportunity. Her work sits at the intersection of policy, philanthropy, and community engagement, with a focus on addressing resource gaps and supporting students from underserved communities.`
+                },
+                {
                   name: "Mohammad Hammad II",
                   role: "Board Member",
                   image: "/mohammad.jpeg",
@@ -122,15 +129,17 @@ export default function TeamPage() {
                         </CardTitle>
                         <div className="flex items-center gap-2 mb-2 mt-1">
                           <CardDescription className="text-slate-600 text-center">{member.role}</CardDescription>
-                          <a
-                            href={member.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`LinkedIn profile of ${member.name}`}
-                            className="ml-1 text-blue-600 hover:text-[#116b36]/80 transition"
-                          >
-                            <Linkedin className="w-5 h-5" />
-                          </a>
+                          {member.linkedin && (
+                            <a
+                              href={member.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`LinkedIn profile of ${member.name}`}
+                              className="ml-1 text-blue-600 hover:text-[#116b36]/80 transition"
+                            >
+                              <Linkedin className="w-5 h-5" />
+                            </a>
+                          )}
                         </div>
                       </CardHeader>
                       <motion.div {...scaleOnHover} className="mt-4 w-full flex justify-center">
@@ -162,16 +171,18 @@ export default function TeamPage() {
                             </DialogDescription>
                           </DialogHeader>
                           <div className="flex items-center gap-3 mb-6">
-                            <a
-                              href={member.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={`LinkedIn profile of ${member.name}`}
-                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#116b36]/20 text-[#116b36] hover:bg-[#116b36] hover:text-white transition-all duration-300 hover:shadow-md"
-                            >
-                              <Linkedin className="w-4 h-4" />
-                              <span className="text-sm font-semibold tracking-wide">LinkedIn</span>
-                            </a>
+                            {member.linkedin && (
+                              <a
+                                href={member.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`LinkedIn profile of ${member.name}`}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#116b36]/20 text-[#116b36] hover:bg-[#116b36] hover:text-white transition-all duration-300 hover:shadow-md"
+                              >
+                                <Linkedin className="w-4 h-4" />
+                                <span className="text-sm font-semibold tracking-wide">LinkedIn</span>
+                              </a>
+                            )}
                           </div>
                           <div className="text-slate-700 text-sm md:text-base whitespace-pre-line leading-relaxed">
                             {member.bio}
