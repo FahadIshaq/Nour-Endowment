@@ -96,20 +96,6 @@ export default function TeamPage() {
                   linkedin: "https://www.linkedin.com/in/tsara7/",
                   bio: `Sara is a Master's student at the University of Michigan and a healthcare consultant at Chartis, with 6+ years of experience working with nonprofits at the intersection of public health, health equity, and education access. She holds dual bachelor's degrees in Biology and Psychology from Michigan.\n\nSara played a pivotal role in launching a tutoring program for underserved students. She is passionate about social impact and committed to empowering others through education and access.`
                 },
-                {
-                  name: "Afira Arshad",
-                  role: "Board Member",
-                  image: "/new_member.jpeg",
-                  linkedin: "https://www.linkedin.com/in/afira-arshad/",
-                  bio: `Afira Arshad is a Master’s student in Education Policy and Analysis at the Harvard Graduate School of Education, where her work focuses on educational equity and systemic reform. She previously worked in Alumni Engagement and Development at Yale Law School, where she supported strategic fundraising initiatives and helped lead the school’s inaugural Giving Day, which raised $2.1 million. Afira earned her bachelor’s degree in Advertising Management from Michigan State University.\n\nAfira is deeply committed to expanding access to education and building systems that create long-term opportunity. Her work sits at the intersection of policy, philanthropy, and community engagement, with a focus on addressing resource gaps and supporting students from underserved communities.`
-                },
-                {
-                  name: "Mohammad Hammad II",
-                  role: "Board Member",
-                  image: "/mohammad.jpeg",
-                  linkedin: "https://www.linkedin.com/in/mohammadhammadll",
-                  bio: `Mohammad Hammad is a freshman at Lansing Community College and an intern at Morgan Stanley Wealth Management. His experience includes portfolio analysis, risk assessment, and supporting investment decision-making in a client-facing environment. Mohammad is deeply interested in finance, investment banking, and long-term value creation, and is actively building his technical and analytical skill set early in his career. He is also passionate about expanding access to opportunity and is developing a philanthropic initiative focused on funding scholarships and improving educational access. Through a combination of professional experience, academic focus, and community-driven goals, Mohammad is building a career at the intersection of finance, impact, and institutional-scale decision-making.`
-                },
               ].map((member, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex justify-center items-stretch">
                   <Dialog open={openIndex === index} onOpenChange={open => setOpenIndex(open ? index : null)}>
