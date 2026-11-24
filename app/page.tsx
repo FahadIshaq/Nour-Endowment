@@ -61,7 +61,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                A Sustainable Endowment That Reinvests In Marginalized Communities Through Education
+                A Sustainable Endowment That Reinvests In Marginalized Communities Through Education And Mentorship
               </motion.h1>
 
               <motion.p
