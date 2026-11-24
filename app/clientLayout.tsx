@@ -165,12 +165,21 @@ export default function ClientLayout({
                 </div>
               </Link>
               <p className="text-[#116b36] leading-relaxed mx-auto mb-8 font-bold">
-              A Sustainable Endowment That Reinvests In Marginalized Communities Through Education
+              A Sustainable Endowment That Reinvests In Marginalized Communities Through Education And Mentorship
 
               </p>
               <div className="border-t border-slate-800 pt-8">
                 <p className="text-[#116b36]">
-                  © {new Date().getFullYear()} Nour Endowment. All rights reserved. | Tax ID: 99-3778982
+                  © {new Date().getFullYear()} Nour Endowment. All rights reserved.
+                </p>
+                <p className="text-[#116b36]">
+                  Nour Endowment is a registered 501(c)(3) nonprofit organization.
+                </p>
+                <p className="text-[#116b36]">
+                  EIN: 39-2335411
+                </p>
+                <p className="text-[#116b36]">
+                  Donations are tax-deductible to the extent permitted by law.
                 </p>
               </div>
             </div>
