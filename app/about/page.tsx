@@ -71,7 +71,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="text-2xl text-slate-700 max-w-6xl mx-auto leading-relaxed font-medium"
             >
-To Build a Sustainable Endowment That Reinvests In Marginalized Communities Through Education And Mentorship            </motion.p>
+A Sustainable Endowment That Reinvests In Marginalized Communities Through Education And Mentorship            </motion.p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
