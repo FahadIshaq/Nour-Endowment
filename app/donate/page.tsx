@@ -175,10 +175,13 @@ export default function DonatePage() {
                     <div className="order-2 md:order-1 mt-8 p-6 bg-slate-50 rounded-2xl">
                       <h4 className="font-bold text-slate-800 mb-4">Tax and Transparency</h4>
                       <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                        We'll share quarterly updates on how the fund is growing and what your support is making possible.
+                        We're committed to transparency and responsible stewardship of your contributions. We'll share quarterly updates on how the endowment is growing, the impact of your generosity, and what your support is making possible.
+                      </p>
+                      <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                        Nour Endowment is an IRS-recognized 501(c)(3) nonprofit organization (EIN: 39-2335411). All donations are tax-deductible to the extent permitted by law and are processed directly through Nour Endowment. Your bank statement will show "Nour Endowment."
                       </p>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        All donations to Nour Endowment are tax-deductible and processed through our fiscal sponsor, Wasla Connect Tax ID: 99-3778982. Your bank statement will show "Nour Endowment," and 100% of your gift supports our work. We're currently awaiting our own 501(c)(3) status. No goods or services were provided in exchange for your donation. If you have any questions, feel free to contact us.
+                        No goods or services are provided in exchange for your charitable contribution. If you have any questions about your donation or our financial stewardship, please feel free to contact us.
                       </p>
                     </div>
                   </div>
